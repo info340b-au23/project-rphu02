@@ -1,69 +1,102 @@
 .card {
-    background-color: powderblue;
-    border-radius: 10px;
-  }
-  
-  .c > p {
-    padding: .5rem 1rem;
-  }
-  
-  .ci > img {
-    border-top-left-radius: 10px;
-    border-top-right-radius: 20px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-  }
-
-  .checked {
-    color: orange;
-  }
-
-  .ddm {
-    background-color: white;
-    border: 2px solid gray; 
-    border-radius: 10px;
-    font-size: 20px;
-  }
-
-   .dd{
-    padding-right:30px;
-  }
-
-  .ss {
-    font-size: 20px;
-  }
-  .filter {
-    background-color:mistyrose;
-    padding: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  .checked {
-    color: orange;
-  }
-
-.rating{
-    display:none;
+  background-color: powderblue;
+  border-radius: 10px;
 }
 
-.test{
-    margin-top:1rem;
+.c>p {
+  padding: .5rem 1rem;
 }
+
+.ci>img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.checked {
+  color: orange;
+}
+
+.ddm {
+  background-color: white;
+  border: 2px solid gray;
+  border-radius: 10px;
+  font-size: 20px;
+}
+
+.dd {
+  padding-right: 30px;
+}
+
+.ss {
+  font-size: 20px;
+}
+
+.filter {
+  background-color: mistyrose;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.checked {
+  color: orange;
+}
+
+.rating {
+  display: none;
+}
+
+.test {
+  margin-top: 1rem;
+}
+
 .bar-container {
-    width: 100%;
-    background-color: gainsboro;
-    text-align: center;
-    color: white;
-  }
-
-.bar-5 {width: 33%; height: 18px; background-color: black;}
-.bar-4 {width: 33%; height: 18px; background-color: black;}
-.bar-3 {width: 33%; height: 18px; background-color: black;}
-.bar-2 {width: 0%; height: 18px; background-color: black;}
-.bar-1 {width: 0%; height: 18px; background-color: black;}
-@media(min-width:768px){
-    .rating{
-        display:block;
-        width:auto;
-    }
+  width: 100%;
+  background-color: gainsboro;
+  text-align: center;
+  color: white;
 }
 
+.bar-5 {
+  width: 33%;
+  height: 18px;
+  background-color: black;
+}
+
+.bar-4 {
+  width: 33%;
+  height: 18px;
+  background-color: black;
+}
+
+.bar-3 {
+  width: 33%;
+  height: 18px;
+  background-color: black;
+}
+
+.bar-2 {
+  width: 0%;
+  height: 18px;
+  background-color: black;
+}
+
+.bar-1 {
+  width: 0%;
+  height: 18px;
+  background-color: black;
+}
+
+/* Map portion of css */
+
+.md-Select {
+  background-color: blue;
+}
+
+@media(min-width:768px) {
+  .rating {
+    display: block;
+    width: auto;
+  }
+}
