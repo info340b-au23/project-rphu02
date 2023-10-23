@@ -113,4 +113,40 @@ footer {
 
 
 
+.rating{
+  display:none;
+}
+
+.test{
+  margin-top:1rem;
+}
+.bar-container {
+  width: 100%;
+  background-color: gainsboro;
+  text-align: center;
+  color: white;
+}
+
+.bar-5 {width: 33%; height: 18px; background-color: black;}
+.bar-4 {width: 33%; height: 18px; background-color: black;}
+.bar-3 {width: 33%; height: 18px; background-color: black;}
+.bar-2 {width: 0%; height: 18px; background-color: black;}
+.bar-1 {width: 0%; height: 18px; background-color: black;}
+
+/* Map portion of css */
+
+.md-Select {
+  font-size: 1.25rem;
+}
+
+.md-Selc-Text {
+  color: white;
+}
+
+@media(min-width:768px){
+  .rating{
+      display:block;
+      width:auto;
+  }
+}
 
