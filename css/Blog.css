@@ -22,13 +22,19 @@
     background-color: white;
     border: 2px solid gray; 
     border-radius: 10px;
+    font-size: 20px;
   }
 
    .dd{
     padding-right:30px;
   }
 
-  .filter {
-    margin: 1rem;
-    background-color:mistyrose;
+  .ss {
+    font-size: 20px;
   }
+  .filter {
+    background-color:mistyrose;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
