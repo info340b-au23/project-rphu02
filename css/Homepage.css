@@ -1,4 +1,4 @@
-/* nav {
+ nav {
     position: fixed;
     top: 0;
     left: 0;
@@ -22,4 +22,39 @@ nav li {
 nav a{
     color: black;
     text-decoration: none;
-} */
+} 
+
+nav i {
+    padding-right: .5rem;
+}
+
+header {
+    background-color:#4b2e83;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 80px;
+}
+
+h2 {
+    font-size: 35px;
+    text-align: center;
+    padding: 1rem;
+}
+
+main {
+    background-color: lightgray;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    background-color: #b7a57a;
+    padding: .5rem;
+}
