@@ -58,3 +58,56 @@ footer {
     background-color: #b7a57a;
     padding: .5rem;
 }
+
+
+
+
+.card {
+    background-color: #a987ee;
+    border-radius: 10px;
+  }
+  
+  .c > p {
+    padding: .5rem 1rem;
+  }
+  
+  .ci > img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+
+  .checked {
+    color: orange;
+  }
+
+  .ddm {
+    background-color: white;
+    border: 2px solid gray; 
+    border-radius: 10px;
+    font-size: 20px;
+  }
+
+   .dd{
+    padding-right:30px;
+  }
+
+  .ss {
+    background-color: white;
+    font-size: 20px;
+  }
+  .filter {
+    background-color: gray;
+    padding: 1.5rem;
+  }
+
+.card-box {
+    padding-top: 50px;
+}
+
+.b {
+    padding-top: 1rem;
+}
+
+
