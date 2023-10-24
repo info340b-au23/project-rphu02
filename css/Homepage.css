@@ -132,6 +132,24 @@ footer {
 
 /* Map portion of css */
 
+#partySizeDDMenuButton, #noiseDDMenuButton, #areaDDMenuButton {
+  width; 100%
+  margin: 0;
+}
+
+.col-selections {
+  margin-left: 4rem;
+}
+
+.dropdown-row .dropdown {
+  width: 100%;
+}
+
+
+img {
+  padding-right: 1rem;
+}
+
 .md-Select {
   font-size: 1.25rem;
 }
