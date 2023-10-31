@@ -136,7 +136,7 @@ footer {
 /* Map portion of css */
 
 #partySizeDDMenuButton, #noiseDDMenuButton, #areaDDMenuButton {
-  width; 100%
+  width: 100%;
   margin: 0;
 }
 
@@ -149,7 +149,7 @@ footer {
 }
 
 
-img {
+.mi > img {
   padding-right: 1rem;
 }
 
