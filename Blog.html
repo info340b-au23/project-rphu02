@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <meta name="author" content="Raymond, Brian, Tyler, Justin">
+  <meta name="description" content="an interactive website that helps find study spot on the UW campus">
+  <title>U StudySpots</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img class src="../img/book.png"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html"><i
+                class="fas fa-home"></i>Homepage</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="Map.html"><i class="fas fa-map-marker-alt"></i>Map</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="Blog.html"><i class="fas fa-pencil-alt"></i>Blog</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <header>
+    <h1>BLOG</h1>
+  </header>
+
+  <nav class="filter navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="dd nav-item dropdown">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+          <a class="ddm nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Noise Level
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="filter_custom.html">Silent</a></li>
+            <li><a class="dropdown-item" href="filter_custom.html">Whisper</a></li>
+            <li><a class="dropdown-item" href="filter_custom.html">Table Talk</a></li>
+            <li><a class="dropdown-item" href="filter_custom.html">Normal</a></li>
+            <li><a class="dropdown-item" href="filter_custom.html">Presenter</a></li>
+            <li><a class="dropdown-item" href="filter_custom.html">Outside</a></li>
+          </ul>
+        </li>
+        <li class="dd nav-item dropdown">
+          <a class="ddm nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Party Size
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="filter_custom.html">1</a></li>
+            <li><a class="dropdown-item" href="filter_custom.html">2</a></li>
+            <li><a class="dropdown-item" href="filter_custom.html">3</a></li>
+            <li><a class="dropdown-item" href="filter_custom.html">4</a></li>
+            <li><a class="dropdown-item" href="filter_custom.html">5</a></li>
+            <li><a class="dropdown-item" href="filter_custom.html">6+</a></li>
+          </ul>
+        </li>
+        <li class="dd nav-item dropdown">
+          <a class="ddm nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Location
+          </a>
+          <ul class="dropdown-menu">
+            <li style="text-align:center">Area</li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="filter_custom.html">North</a></li>
+            <li><a class="dropdown-item" href="filter_custom.html">South</a></li>
+            <li><a class="dropdown-item" href="filter_custom.html">East</a></li>
+            <li><a class="dropdown-item" href="filter_custom.html">West</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li style="text-align:center">Building</li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="filter_custom.html">Bill and Melinda Gates Center</a></li>
+            <li><a class="dropdown-item" href="filter_custom.html">Odegaard Library</a></li>
+            <li><a class="dropdown-item" href="filter_custom.html">Suzzallo and Allen Libraries</a></li>
+            <li><a class="dropdown-item" href="filter_custom.html">Nanoengineering & Sciences</a></li>
+          </ul>
+        </li>
+
+        <form class="d-flex" role="search">
+          <input class="ss form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="ss btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <div class="card-box container">
+      <div class="row">
+        <!-- Card 1 -->
+        <div class="col col-md-6 col-xl-4 d-flex">
+          <div class="card mb-4">
+            <div class="card-body">
+              <div class="row">
+                <div class="ci col col-sm-auto col-xl-12">
+                  <img class="pb-3" src="../img/cs_building.jpg" alt="cs_building">
+                </div>
+                <div class="col-sm">
+                  <h2 class="card-title">Bill and Melinda Gates Center</h2>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                  <div class="row">
+                    <div class="b">
+                      <a class="btn btn-dark" href="Map.html">Map</a>
+                      <a class="btn btn-dark" href="forum_popup.html">Learn More</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col col-md-6 col-xl-4 d-flex">
+          <div class="card mb-4">
+            <div class="card-body">
+              <div class="row">
+                <div class="ci col col-sm-auto col-xl-12">
+                  <img class="pb-3" src="../img/ode.jpg" alt="ode">
+                </div>
+                <div class="col-sm">
+                  <h2 class="card-title">Odegaard Library</h2>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                  <div class="row">
+                    <div class="b">
+                      <a class="btn btn-dark" href="Map.html">Map</a>
+                      <a class="btn btn-dark" href="forum_popup.html">Learn More</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col col-md-6 col-xl-4 d-flex">
+          <div class="card mb-4">
+            <div class="card-body">
+              <div class="row">
+                <div class="ci col col-sm-auto col-xl-12">
+                  <img class="pb-3" src="../img/suzzallo.jpg" alt="suzzallo">
+                </div>
+                <div class="col-sm">
+                  <h2 class="card-title">Suzzallo and Allen Libraries</h2>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <div class="row">
+                    <div class="b">
+                      <a class="btn btn-dark" href="Map.html">Map</a>
+                      <a class="btn btn-dark" href="forum_popup.html">Learn More</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="col col-md-6 col-xl-4 d-flex">
+          <div class="card mb-4">
+            <div class="card-body">
+              <div class="row">
+                <div class="ci col col-sm-auto col-xl-12">
+                  <img class="pb-3" src="../img/nano.jpg" alt="nano">
+                </div>
+                <div class="col-sm">
+                  <h2 class="card-title">Nanoengineering & Sciences</h2>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                  <div class="row">
+                    <div class="b">
+                      <a class="btn btn-dark" href="Map.html">Map</a>
+                      <a class="btn btn-dark" href="forum_popup.html">Learn More</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="col col-md-6 col-xl-4 d-flex">
+          <div class="card mb-4">
+            <div class="card-body">
+              <div class="row">
+                <div class="ci col col-sm-auto col-xl-12">
+                  <img class="pb-3" src="../img/plus.png" alt="plus">
+                </div>
+                <div class="col-sm">
+                  <h2 class="card-title">Add Custom Spot</h2>
+                  <p class="card-text">Have a secret study spot that you want people to know about? add it here!!!!</p>
+                  <a class="btn btn-dark" href="add_custom.html">Add</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>
