@@ -31,7 +31,7 @@
     "img": "img/nano.jpg",
     "maxpartySize": 4,
     "rating": 3,
-    "noiseLevel": "quiet",
+    "noiseLevel": "Normal",
     "location": "Nanoengineering & Sciences",
     "area": "West"
   },

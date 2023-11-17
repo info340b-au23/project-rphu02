@@ -1,31 +1,84 @@
 import React, { useState } from 'react'; //import React Component
 export function NavBlog(props) {
-  const liCards = props.building.map((building) => {
-    const element = <li key={building}><a className="dropdown-item" href="filter_custom.html" onChange={() => location = building.location}>{building.location}</a></li>
-    return element;
+
+  const [noiseLevel, SetnoiseLevel] = useState(undefined);
+  const [partySize, SetpartySize] = useState(undefined);
+  const [location, Setlocation] = useState(undefined);
+  const [buildingName, SetbuildingName] = useState(undefined);
+  const [searchBuilding, SetsearchBuilding] = useState(undefined);
+
+  const liBuildings = props.building.map((building) => {
+    return <option key={building} value={buildingName}>{building}</option>;
   });
 
-  const [partySize,SetpartySize] = useState(null);
-  const [noiseLevel,SetnoiseLevel] = useState(null);
-  const [location,Setlocation] = useState(null);
-  const [searchBuilding,SetsearchBuilding] = useState("");
-  function psCallBack(event) {
-    SetpartySize(event.target.value);
-  }
   function nlCallBack(event) {
-   SetnoiseLevel(event.target.value);
+    console.log(event.target.value);
+    SetnoiseLevel(event.target.value);
+  }
+  function psCallBack(event) {
+    console.log(event.target.value);
+    SetpartySize(event.target.value);
   }
   function lCallBack(event) {
     Setlocation(event.target.value);
+  }
+  function bnCallBack(event) {
+    SetbuildingName(event.target.value);
   }
   function sbCallBack(event) {
     SetsearchBuilding(event.target.value);
   }
   function buttonCallBack(event) {
-    props.applyFilterCallback(partySize,noiseLevel,location,searchBuilding);
+    props.applyFilterCallback(partySize, noiseLevel, location, buildingName, searchBuilding);
   }
   return (
-    <nav className="filter navbar navbar-expand-lg">
+    <div className="row align-items-center mb-3">
+      <div className="col-auto">
+        <select id="noiselevel" className="form-select" value={noiseLevel} onChange={nlCallBack}>
+          <option value="">Noise Level</option>
+          <option key="Silent" value={noiseLevel}>Silent</option>
+          <option key="Whisper" value={noiseLevel}>Whisper</option>
+          <option key="Table Talk" value={noiseLevel}>Table Talk</option>
+          <option key="Normal" value={noiseLevel}>Normal</option>
+          <option key="Presenter" value={noiseLevel}>Presenter</option>
+          <option key="Outside" value={noiseLevel}>Outside</option>
+        </select>
+      </div>
+      <div className="col-auto">
+        <select id="party-size" className="form-select" value={partySize} onChange={psCallBack}>
+          <option value="">Party Size</option>
+          <option key={1} value={partySize}>1</option>
+          <option key={2} value={partySize}>2</option>
+          <option key={3} value={partySize}>3</option>
+          <option key={4} value={partySize}>4</option>
+          <option key={5} value={partySize}>5</option>
+          <option key={6} value={partySize}>6+</option>
+        </select>
+      </div>
+      <div className="col-auto">
+        <select id="location" className="form-select" value={location} onChange={lCallBack}>
+          <option value="">Area</option>
+          <option key={"North"} value={location}>North</option>
+          <option key={"East"} value={location}>South</option>
+          <option key={"South"} value={location}>East</option>
+          <option key={"West"} value={location}>West</option>
+        </select>
+      </div>
+
+      <div className="col-auto">
+        <select id="building" className="form-select" value={buildingName} onChange={bnCallBack}>
+          <option value="">Building</option>
+          {liBuildings}
+        </select>
+      </div>
+      <div className="col-auto">
+        <button id="submitButton" type="submit" className="btn btn-warning" onClick={buttonCallBack}>Apply Filter</button>
+      </div>
+    </div>
+  );
+}
+
+/* <nav className="filter navbar navbar-expand-lg">
       <div className="container-fluid">
         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
           <li key={"noise-level"} className="dd nav-item dropdown">
@@ -86,6 +139,4 @@ export function NavBlog(props) {
           
         </ul>
       </div>
-    </nav>
-  );
-}
+    </nav> */

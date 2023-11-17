@@ -3,36 +3,37 @@ import './App.css';
 import { BuildingCardTable } from './component/BuildingCardTable';
 import { NavBlog } from './component/Navigation';
 function App(props) {
-  const [partySize,SetpartySize] = useState(null);
-  const [noiseLevel,SetnoiseLevel] = useState(null);
-  const [location,Setlocation] = useState(null);
-  const [searchBuilding,SetsearchBuilding] = useState(null);
-  function applyFilter(partysize,noiselevel,location,searchbuilding) {
+  const [partySize,SetpartySize] = useState(undefined);
+  const [noiseLevel,SetnoiseLevel] = useState(undefined);
+  const [location,Setlocation] = useState(undefined);
+  const [buildingName,SetbuildingName] = useState(undefined);
+  const [searchBuilding,SetsearchBuilding] = useState(undefined);
+  function applyFilter(partysize,noiselevel,location,buildingName,searchbuilding) {
     SetpartySize(partysize);
     SetnoiseLevel(noiselevel);
     Setlocation(location);
+    SetbuildingName(buildingName)
     SetsearchBuilding(searchbuilding);
   }
 
   // for the filtering in blog nav bar
   var displayedData = props.buildingsData;
-  const filternull = [partySize,noiseLevel,location,searchBuilding];
+  const filternull = [partySize,noiseLevel,location,buildingName,searchBuilding];
   for (let i = 0; i < filternull.length; i++) { 
-    if (filternull[i] != null) {
+    if (filternull[i] !== undefined) {
       if(i === 0) {
-        displayedData = displayedData.filter((building) => (partySize >= building.maxpartySize));
+        displayedData = displayedData.filter((building) => ((partySize === "6+")? parseInt(partySize[0]) <= building.maxpartySize : partySize <= building.maxpartySize));
       }
       else if(i === 1) {
-        displayedData = displayedData.filter((building) => (noiseLevel === building.noiselevel));
+        displayedData = displayedData.filter((building) => (noiseLevel === building.noiseLevel));
       }
       else if(i === 2) {
-        if (filternull[i] === "North" || filternull[i] === "East" || filternull[i] === "South" || filternull[i] === "West"){
-          displayedData = displayedData.filter((building) => (location === building.area));
-        }
-        else {
-          displayedData = displayedData.filter((building) => (location === building.location));}
+        displayedData = displayedData.filter((building) => (location === building.area));
       }
       else if(i === 3) {
+        displayedData = displayedData.filter((building) => (buildingName === building.location));
+      }
+      else if(i === 4) {
         displayedData = displayedData.filter((building) => (searchBuilding === building.location));
       }
     }
