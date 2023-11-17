@@ -5,7 +5,7 @@ import { NavBlog } from './component/Navigation';
 function App(props) {
   const [partySize,SetpartySize] = useState(null);
   const [noiseLevel,SetnoiseLevel] = useState(null);
-  const [location,Setlocation] = useState("null");
+  const [location,Setlocation] = useState(null);
   const [searchBuilding,SetsearchBuilding] = useState(null);
   function applyFilter(partysize,noiselevel,location,searchbuilding) {
     SetpartySize(partysize);
@@ -33,19 +33,20 @@ function App(props) {
           displayedData = displayedData.filter((building) => (location === building.location));}
       }
       else if(i === 3) {
-        displayedData = displayedData.filter((building) => (searchBuilding === building.name));
+        displayedData = displayedData.filter((building) => (searchBuilding === building.location));
       }
     }
   }
 
-  console.log(displayedData);
+  //console.log(displayedData);
 
   const uniqueBuildingSet = new Set(props.buildingsData.map(building => building.location));
   const uniqueBuildingArray = [...uniqueBuildingSet];
   return (
-    <NavBlog building={uniqueBuildingArray} />
-    // <BuildingCardTable buildingList={props.buildingsData} />
+    <main>
+      <NavBlog building={uniqueBuildingArray} applyFilterCallback={applyFilter}/>
+      <BuildingCardTable buildingList={displayedData}/>
+    </main>
   );
 }
-//<BuildingCardTable buildingList={props.buildingsData}/>
 export default App;
