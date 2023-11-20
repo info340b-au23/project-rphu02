@@ -43,5 +43,59 @@
     "noiseLevel": "quiet",
     "location": "Paul G. Allen Center for Computer Science & Engineering (Allen Center)",
     "area": "South"
+  },
+  {
+    "name": "Commuter & Transfer Commons",
+    "img": "img/commuter_lounge.jpg",
+    "maxpartySize": 4,
+    "rating": 3,
+    "noiseLevel": "Normal",
+    "location": "The Hub",
+    "area": "North"
+  },
+  {
+    "name": "Allen Library",
+    "img": "img/allen_library.jpg",
+    "maxpartySize": 6,
+    "rating": 4,
+    "noiseLevel": "Normal",
+    "location": "Suzzallo and Allen Libraries",
+    "area": "West"
+  },
+  {
+    "name": "The Bill and Melinda Gates Commons",
+    "img": "img/cs_common.jpg",
+    "maxpartySize": 3,
+    "rating": 4,
+    "noiseLevel": "Presenter",
+    "location": "Bill and Melinda Gates Center",
+    "area": "West"
+  },
+  {
+    "name": "Harry Potter Library",
+    "img": "img/suzzallo_harry_potter.jpg",
+    "maxpartySize": 1,
+    "rating": 4,
+    "noiseLevel": "Silent",
+    "location": "Suzzallo and Allen Libraries",
+    "area": "West"
+  },
+  {
+    "name": "Odegaard Library Quiet Study Area",
+    "img": "img/ode_quiet.jpg",
+    "maxpartySize": 1,
+    "rating": 4,
+    "noiseLevel": "Silent",
+    "location": "Odegaard Library",
+    "area": "West"
+  },
+  {
+    "name": "The Hub",
+    "img": "img/hub.jpg",
+    "maxpartySize": 4,
+    "rating": 4,
+    "noiseLevel": "Normal",
+    "location": "The Hub",
+    "area": "West"
   }
 ]

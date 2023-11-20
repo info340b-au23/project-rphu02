@@ -8,7 +8,7 @@ export function NavBlog(props) {
   const [searchBuilding, SetsearchBuilding] = useState(undefined);
 
   const liBuildings = props.building.map((building) => {
-    return <option key={building} value={buildingName}>{building}</option>;
+    return <option key={building} value={building}>{building}</option>;
   });
 
   function nlCallBack(event) {
@@ -31,37 +31,44 @@ export function NavBlog(props) {
   function buttonCallBack(event) {
     props.applyFilterCallback(partySize, noiseLevel, location, buildingName, searchBuilding);
   }
+
+  function clearCallBack(event) {
+    props.applyFilterCallback(undefined, undefined, undefined, undefined, undefined);
+  }
   return (
-    <div className="row align-items-center mb-3">
+    <div className="bnav row align-items-center mb-3">
+      <div className="col-auto">
+        <button id="submitButton" type="submit" className="btn btn-warning" onClick={clearCallBack}>Clear</button>
+      </div>
       <div className="col-auto">
         <select id="noiselevel" className="form-select" value={noiseLevel} onChange={nlCallBack}>
           <option value="">Noise Level</option>
-          <option key="Silent" value={noiseLevel}>Silent</option>
-          <option key="Whisper" value={noiseLevel}>Whisper</option>
-          <option key="Table Talk" value={noiseLevel}>Table Talk</option>
-          <option key="Normal" value={noiseLevel}>Normal</option>
-          <option key="Presenter" value={noiseLevel}>Presenter</option>
-          <option key="Outside" value={noiseLevel}>Outside</option>
+          <option key="Silent" value={"Silent"}>Silent</option>
+          <option key="Whisper" value={"Whisper"}>Whisper</option>
+          <option key="Table Talk" value={"Table Talk"}>Table Talk</option>
+          <option key="Normal" value={"Normal"}>Normal</option>
+          <option key="Presenter" value={"Presenter"}>Presenter</option>
+          <option key="Outside" value={"Outside"}>Outside</option>
         </select>
       </div>
       <div className="col-auto">
         <select id="party-size" className="form-select" value={partySize} onChange={psCallBack}>
           <option value="">Party Size</option>
-          <option key={1} value={partySize}>1</option>
-          <option key={2} value={partySize}>2</option>
-          <option key={3} value={partySize}>3</option>
-          <option key={4} value={partySize}>4</option>
-          <option key={5} value={partySize}>5</option>
-          <option key={6} value={partySize}>6+</option>
+          <option key={1} value={1}>1</option>
+          <option key={2} value={2}>2</option>
+          <option key={3} value={3}>3</option>
+          <option key={4} value={4}>4</option>
+          <option key={5} value={5}>5</option>
+          <option key={6} value={6}>6+</option>
         </select>
       </div>
       <div className="col-auto">
         <select id="location" className="form-select" value={location} onChange={lCallBack}>
           <option value="">Area</option>
-          <option key={"North"} value={location}>North</option>
-          <option key={"East"} value={location}>South</option>
-          <option key={"South"} value={location}>East</option>
-          <option key={"West"} value={location}>West</option>
+          <option key={"North"} value={"North"}>North</option>
+          <option key={"East"} value={"South"}>South</option>
+          <option key={"South"} value={"East"}>East</option>
+          <option key={"West"} value={"West"}>West</option>
         </select>
       </div>
 
@@ -72,7 +79,7 @@ export function NavBlog(props) {
         </select>
       </div>
       <div className="col-auto">
-        <button id="submitButton" type="submit" className="btn btn-warning" onClick={buttonCallBack}>Apply Filter</button>
+        <button id="submitButton" type="submit" className="btn btn-success" onClick={buttonCallBack}>Apply Filter</button>
       </div>
     </div>
   );
