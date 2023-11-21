@@ -25,8 +25,8 @@ export function BuildingCard(props) {
               {liStars}
               <div className="row">
                 <div className="b">
-                  <a className="btn btn-dark" href="../html/Map.html">Map</a>
-                  <a className="btn btn-dark" href="../html/forum_popup.html">Learn More</a>
+                  <a className="btn btn-dark" href="">Map</a>
+                  <a className="btn btn-dark ba" href="">Learn More</a>
                 </div>
               </div>
             </div>

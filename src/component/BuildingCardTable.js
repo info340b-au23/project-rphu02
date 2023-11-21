@@ -19,7 +19,7 @@ export function BuildingCardTable(props) {
                         <div className="col-sm">
                             <h2 className="card-title">Add Custom Spot</h2>
                             <p className="card-text">Have a secret study spot that you want people to know about? add it here!!!!</p>
-                            <a className="btn btn-dark" href="../html/add_custom.html">Add</a>
+                            <a className="btn btn-dark" href="">Add</a>
                         </div>
                     </div>
                 </div>

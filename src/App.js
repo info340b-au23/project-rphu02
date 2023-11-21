@@ -43,6 +43,9 @@ function App(props) {
 
   const uniqueBuildingSet = new Set(props.buildingsData.map(building => building.location));
   const uniqueBuildingArray = [...uniqueBuildingSet];
+
+  const uniqueAreaSet = new Set(props.buildingsData.map(building => building.area));
+  const uniqueAreaArray = [...uniqueAreaSet];
   return (
     <div>
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -71,7 +74,7 @@ function App(props) {
         <h1>BLOG</h1>
       </header>
       <main>
-        <NavBlog building={uniqueBuildingArray} applyFilterCallback={applyFilter} />
+        <NavBlog building={uniqueBuildingArray} area={uniqueAreaArray} applyFilterCallback={applyFilter} />
         <BuildingCardTable buildingList={displayedData} />
       </main>
     </div>

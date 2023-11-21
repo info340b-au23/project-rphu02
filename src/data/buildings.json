@@ -6,7 +6,7 @@
     "rating": 3,
     "noiseLevel": "quiet",
     "location": "Bill and Melinda Gates Center",
-    "area": "North"
+    "area": "East Campus"
   },
   {
     "name": "Odegaard Library",
@@ -15,7 +15,7 @@
     "rating": 2,
     "noiseLevel": "quiet",
     "location": "Odegaard Library",
-    "area": "East"
+    "area": "Red Square"
   },
   {
     "name": "Suzzallo and Allen Libraries",
@@ -24,7 +24,7 @@
     "rating": 4,
     "noiseLevel": "quiet",
     "location": "Suzzallo and Allen Libraries",
-    "area": "West"
+    "area": "Red Square"
   },
   {
     "name": "Nanoengineering & Sciences",
@@ -33,7 +33,7 @@
     "rating": 3,
     "noiseLevel": "Normal",
     "location": "Nanoengineering & Sciences",
-    "area": "West"
+    "area": "The Fountain"
   },
   {
     "name": "Paul G. Allen Center for Computer Science & Engineering (Allen Center)",
@@ -42,7 +42,7 @@
     "rating": 3,
     "noiseLevel": "quiet",
     "location": "Paul G. Allen Center for Computer Science & Engineering (Allen Center)",
-    "area": "South"
+    "area": "East Campus"
   },
   {
     "name": "Commuter & Transfer Commons",
@@ -51,7 +51,7 @@
     "rating": 3,
     "noiseLevel": "Normal",
     "location": "The Hub",
-    "area": "North"
+    "area": "The Hub"
   },
   {
     "name": "Allen Library",
@@ -60,7 +60,7 @@
     "rating": 4,
     "noiseLevel": "Normal",
     "location": "Suzzallo and Allen Libraries",
-    "area": "West"
+    "area": "The Hub"
   },
   {
     "name": "The Bill and Melinda Gates Commons",
@@ -69,7 +69,7 @@
     "rating": 4,
     "noiseLevel": "Presenter",
     "location": "Bill and Melinda Gates Center",
-    "area": "West"
+    "area": "East Campus"
   },
   {
     "name": "Harry Potter Library",
@@ -78,7 +78,7 @@
     "rating": 4,
     "noiseLevel": "Silent",
     "location": "Suzzallo and Allen Libraries",
-    "area": "West"
+    "area": "Red Square"
   },
   {
     "name": "Odegaard Library Quiet Study Area",
@@ -87,7 +87,7 @@
     "rating": 4,
     "noiseLevel": "Silent",
     "location": "Odegaard Library",
-    "area": "West"
+    "area": "Red Square"
   },
   {
     "name": "The Hub",
@@ -96,6 +96,24 @@
     "rating": 4,
     "noiseLevel": "Normal",
     "location": "The Hub",
-    "area": "West"
+    "area": "The Hub"
+  },
+  {
+    "name": "Mary Gates Hall",
+    "img": "img/mary_gates.jpg",
+    "maxpartySize": 6,
+    "rating": 4,
+    "noiseLevel": "Normal",
+    "location": "Mary Gates",
+    "area": "The Fountain"
+  },
+  {
+    "name": "PACCAR Hall",
+    "img": "img/paccar.jpg",
+    "maxpartySize": 4,
+    "rating": 4,
+    "noiseLevel": "Normal",
+    "location": "Paccar Hall",
+    "area": "The Quad"
   }
 ]
