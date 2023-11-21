@@ -1,5 +1,4 @@
 import React, { useState } from 'react'; //import React Component
-import './App.css';
 import { BuildingCardTable } from './component/BuildingCardTable';
 import { NavBlog } from './component/Navigation';
 function App(props) {
