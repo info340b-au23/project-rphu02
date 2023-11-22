@@ -4,7 +4,7 @@ import { NavBlog } from './component/Navigation';
 import { NavMain } from './component/Navigation';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './component/Home';
-import Map from './component/Map';
+import MapPage from './component/MapPage';
 import Blog from './component/Blog';
 
 
