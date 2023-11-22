@@ -15,6 +15,15 @@ export function NavBlog(props) {
     return <option key={area} value={area}>{area}</option>;
   });
 
+  const temp = props.area.map((area) =>{
+    return <div className="col-auto">
+    <div className="form-check">
+      <input id="runnerupCheckbox" type="checkbox" className="form-check-input" value=""/>
+      <label htmlFor="runnerupCheckbox" className="form-check-label"> {}</label>
+    </div>
+  </div>
+  });
+
   function nlCallBack(event) {
     console.log(event.target.value);
     SetnoiseLevel(event.target.value);
