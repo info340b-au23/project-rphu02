@@ -70,10 +70,12 @@ export function NavBlog(props) {
     document.getElementById("ps").selectedIndex = 0;
     document.getElementById("l").selectedIndex = 0;
     document.getElementById("b").selectedIndex = 0;
-    // ns.selectedIndex = 0;
-    // ps.selectedIndex = 0;
-    // l.selectedIndex = 0;
-    // b.selectedIndex = 0;
+    SetpartySize("");
+    SetnoiseLevel("");
+    Setlocation("");
+    SetbuildingName("");
+    SetsearchBuilding("");
+    
   }
 
   return (

@@ -14,7 +14,7 @@ export default function Blog(props) {
         SetpartySize(partysize);
         SetnoiseLevel(noiselevel);
         Setlocation(location);
-        SetbuildingName(buildingName)
+        SetbuildingName(buildingName);
         SetsearchBuilding(searchbuilding);
       }
       // for the filtering in blog nav bar
