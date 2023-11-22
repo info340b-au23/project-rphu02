@@ -68,7 +68,7 @@ function DropdownMenuBig(props) {  //expect a title and items prop
                 <div className="form-check">
                     <input className="form-check-input" type="checkbox" id={item.id + 'Checkbox'} />
                     <label className="form-check-label md-Selc-Text" htmlFor={item.id + 'Checkbox'}>
-                        {item.id}
+                        {item.label}
                     </label>
                 </div>
             ))}
