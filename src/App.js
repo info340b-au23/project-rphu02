@@ -53,7 +53,7 @@ function App(props) {
         <NavMain />
         <main>
           <Routes>
-            <Route path="/" exact element={<Home data={props.buildingsData}/>} />
+            <Route path="/" exact element={<Home />} />
             <Route path="/map" element={<MapPage />} />
             <Route path="/blog" element={<Blog />} />
             {/* <NavBlog building={uniqueBuildingArray} applyFilterCallback={applyFilter} />

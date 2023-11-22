@@ -5,7 +5,7 @@ export function NavMain() {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#"><img class src="../img/book.png" /></a>
+        <a className="navbar-brand" href="#"><img src="../img/book.png" /></a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
@@ -30,11 +30,11 @@ export function NavMain() {
 
 export function NavBlog(props) {
 
-  const [noiseLevel, SetnoiseLevel] = useState(undefined);
-  const [partySize, SetpartySize] = useState(undefined);
-  const [location, Setlocation] = useState(undefined);
-  const [buildingName, SetbuildingName] = useState(undefined);
-  const [searchBuilding, SetsearchBuilding] = useState(undefined);
+  const [noiseLevel, SetnoiseLevel] = useState("");
+  const [partySize, SetpartySize] = useState("");
+  const [location, Setlocation] = useState("");
+  const [buildingName, SetbuildingName] = useState("");
+  const [searchBuilding, SetsearchBuilding] = useState("");
 
   const liBuildings = props.building.map((building) => {
     return <option key={building} value={building}>{building}</option>;
@@ -44,21 +44,11 @@ export function NavBlog(props) {
     return <option key={area} value={area}>{area}</option>;
   });
 
-  const temp = props.area.map((area) =>{
-    return <div className="col-auto">
-    <div className="form-check">
-      <input id="runnerupCheckbox" type="checkbox" className="form-check-input" value=""/>
-      <label htmlFor="runnerupCheckbox" className="form-check-label"> {}</label>
-    </div>
-  </div>
-  });
 
   function nlCallBack(event) {
-    console.log(event.target.value);
     SetnoiseLevel(event.target.value);
   }
   function psCallBack(event) {
-    console.log(event.target.value);
     SetpartySize(event.target.value);
   }
   function lCallBack(event) {
@@ -75,15 +65,24 @@ export function NavBlog(props) {
   }
 
   function clearCallBack(event) {
-    props.applyFilterCallback(undefined, undefined, undefined, undefined, undefined);
+    props.applyFilterCallback("", "", "", "", "");
+    document.getElementById("nl").selectedIndex = 0;
+    document.getElementById("ps").selectedIndex = 0;
+    document.getElementById("l").selectedIndex = 0;
+    document.getElementById("b").selectedIndex = 0;
+    // ns.selectedIndex = 0;
+    // ps.selectedIndex = 0;
+    // l.selectedIndex = 0;
+    // b.selectedIndex = 0;
   }
+
   return (
     <div className="bnav row align-items-center mb-3">
       <div className="col-auto">
         <button id="submitButton" type="submit" className="btn btn-warning" onClick={clearCallBack}>Clear</button>
       </div>
       <div className="col-auto">
-        <select id="noiselevel" className="form-select" value={noiseLevel} onChange={nlCallBack}>
+        <select id="nl" className="form-select" value={noiseLevel} onChange={nlCallBack}>
           <option value="">Noise Level</option>
           <option key="Silent" value={"Silent"}>Silent</option>
           <option key="Whisper" value={"Whisper"}>Whisper</option>
@@ -94,7 +93,7 @@ export function NavBlog(props) {
         </select>
       </div>
       <div className="col-auto">
-        <select id="party-size" className="form-select" value={partySize} onChange={psCallBack}>
+        <select id="ps" className="form-select" value={partySize} onChange={psCallBack}>
           <option value="">Party Size</option>
           <option key={1} value={1}>1</option>
           <option key={2} value={2}>2</option>
@@ -105,14 +104,14 @@ export function NavBlog(props) {
         </select>
       </div>
       <div className="col-auto">
-        <select id="location" className="form-select" value={location} onChange={lCallBack}>
+        <select id="l" className="form-select" value={location} onChange={lCallBack}>
           <option value="">Area</option>
           {liAreas}
         </select>
       </div>
 
       <div className="col-auto">
-        <select id="building" className="form-select" value={buildingName} onChange={bnCallBack}>
+        <select id="b" className="form-select" value={buildingName} onChange={bnCallBack}>
           <option value="">Building</option>
           {liBuildings}
         </select>

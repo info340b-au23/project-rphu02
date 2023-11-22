@@ -13,7 +13,7 @@ export function BuildingCard(props) {
 
 
   return (
-    <div className="col col-md-6 col-xl-4 d-flex">
+      <><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></link><div className="col col-md-6 col-xl-4 d-flex">
       <div className="card mb-4">
         <div className="card-body">
           <div className="row">
@@ -34,5 +34,6 @@ export function BuildingCard(props) {
         </div>
       </div>
     </div>
+    </>
   );
 }

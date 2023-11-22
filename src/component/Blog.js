@@ -2,13 +2,14 @@ import React, { useState } from 'react'; //import React Component
 import { BuildingCardTable } from './BuildingCardTable';
 import { NavBlog } from './Navigation';
 import { NavMain } from './Navigation';
+import buildings from "../data/buildings.json"
 
 export default function Blog(props) {
-    const [partySize, SetpartySize] = useState(undefined);
-    const [noiseLevel, SetnoiseLevel] = useState(undefined);
-    const [location, Setlocation] = useState(undefined);
-    const [buildingName, SetbuildingName] = useState(undefined);
-    const [searchBuilding, SetsearchBuilding] = useState(undefined);
+    const [partySize, SetpartySize] = useState("");
+    const [noiseLevel, SetnoiseLevel] = useState("");
+    const [location, Setlocation] = useState("");
+    const [buildingName, SetbuildingName] = useState("");
+    const [searchBuilding, SetsearchBuilding] = useState("");
     function applyFilter(partysize, noiselevel, location, buildingName, searchbuilding) {
         SetpartySize(partysize);
         SetnoiseLevel(noiselevel);
@@ -17,10 +18,10 @@ export default function Blog(props) {
         SetsearchBuilding(searchbuilding);
       }
       // for the filtering in blog nav bar
-      var displayedData = props.data;
+      var displayedData = buildings;
       const filternull = [partySize, noiseLevel, location, buildingName, searchBuilding];
       for (let i = 0; i < filternull.length; i++) {
-        if (filternull[i] !== undefined) {
+        if (filternull[i] !== "") {
           if (i === 0) {
             displayedData = displayedData.filter((building) => ((partySize === "6+") ? parseInt(partySize[0]) <= building.maxpartySize : partySize <= building.maxpartySize));
           }
@@ -40,9 +41,9 @@ export default function Blog(props) {
       }
       //console.log(displayedData);
     
-      const uniqueBuildingSet = new Set(props.data.map(building => building.location));
+      const uniqueBuildingSet = new Set(buildings.map(building => building.location));
       const uniqueBuildingArray = [...uniqueBuildingSet];
-      const uniqueAreaSet = new Set(props.data.map(building => building.area));
+      const uniqueAreaSet = new Set(buildings.map(building => building.area));
       const uniqueAreaArray = [...uniqueAreaSet];
     
     return (
