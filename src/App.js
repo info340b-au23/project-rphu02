@@ -1,7 +1,13 @@
 import React, { useState } from 'react'; //import React Component
-import './App.css';
 import { BuildingCardTable } from './component/BuildingCardTable';
 import { NavBlog } from './component/Navigation';
+import { NavMain } from './component/Navigation';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Home from './component/Home';
+import MapPage from './component/MapPage';
+import Blog from './component/Blog';
+import Footer from './component/Footer';
+
 function App(props) {
   const [partySize, SetpartySize] = useState(undefined);
   const [noiseLevel, SetnoiseLevel] = useState(undefined);
@@ -47,34 +53,14 @@ function App(props) {
   const uniqueAreaSet = new Set(props.buildingsData.map(building => building.area));
   const uniqueAreaArray = [...uniqueAreaSet];
   return (
-    <div>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
-        <div className="container-fluid">
-          <a className="navbar-brand" href="#"><img src="../img/book.png" /></a>
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href=""><i className="fas fa-home"></i>Homepage</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link active" href=""><i className="fas fa-map-marker-alt"></i>Map</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link active" href=""><i className="fas fa-pencil-alt"></i>Blog</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-      <header>
+    <Router>
+      <div>
+        <NavMain />
+        {/* <header>
         <h1>BLOG</h1>
       </header>
       <main>
-        <NavBlog building={uniqueBuildingArray} area={uniqueAreaArray} applyFilterCallback={applyFilter} />
+        <NavBlog building={uniqueBuildingArray} applyFilterCallback={applyFilter} />
         <BuildingCardTable buildingList={displayedData} />
       </main>
     </div>

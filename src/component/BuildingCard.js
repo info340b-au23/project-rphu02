@@ -2,11 +2,11 @@ import React, { useState } from 'react'; //import React Component
 
 export function BuildingCard(props) {
   var liStars = [
-  <span key={1} className="fa fa-star"></span>,
-  <span key={2} className="fa fa-star"></span>,
-  <span key={3} className="fa fa-star"></span>,
-  <span key={4} className="fa fa-star"></span>,
-  <span key={5} className="fa fa-star"></span>];
+    <span key={1} className="fa fa-star"></span>,
+    <span key={2} className="fa fa-star"></span>,
+    <span key={3} className="fa fa-star"></span>,
+    <span key={4} className="fa fa-star"></span>,
+    <span key={5} className="fa fa-star"></span>];
   for (let i = 0; i < props.building.rating; i++) {
     liStars[i] = <span key={i} className="fa fa-star checked"></span>
   }
