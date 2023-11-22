@@ -60,7 +60,7 @@ function App(props) {
         <main>
           <Routes>
             <Route path="/" exact element={<Home />} />
-            <Route path="/map" element={<Map />} />
+            <Route path="/map" element={<MapPage />} />
             <Route path="/blog" element={<Blog />} /> 
             {/* <NavBlog building={uniqueBuildingArray} applyFilterCallback={applyFilter} />
             <BuildingCardTable buildingList={displayedData} /> */}
