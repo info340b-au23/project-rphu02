@@ -1,5 +1,5 @@
 import React, { useState } from 'react'; //import React Component
-import { NavLink, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export function NavMain() {
   return (
