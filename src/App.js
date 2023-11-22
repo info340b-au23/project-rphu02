@@ -6,8 +6,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './component/Home';
 import MapPage from './component/MapPage';
 import Blog from './component/Blog';
-
-
+import Footer from './component/Footer';
 
 function App(props) {
   const [partySize, SetpartySize] = useState(undefined);
@@ -61,11 +60,12 @@ function App(props) {
           <Routes>
             <Route path="/" exact element={<Home />} />
             <Route path="/map" element={<MapPage />} />
-            <Route path="/blog" element={<Blog />} /> 
+            <Route path="/blog" element={<Blog />} />
             {/* <NavBlog building={uniqueBuildingArray} applyFilterCallback={applyFilter} />
             <BuildingCardTable buildingList={displayedData} /> */}
           </Routes>
         </main>
+        <Footer />
       </div>
     </Router>
   );

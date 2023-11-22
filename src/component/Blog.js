@@ -40,15 +40,15 @@ export default function Blog() {
                                 Location
                             </a>
                             <ul className="dropdown-menu">
-                                <li style={{textAlign: 'center'}}>Area</li>
-                                <li><hr className="dropdown-divider"/></li>
+                                <li style={{ textAlign: 'center' }}>Area</li>
+                                <li><hr className="dropdown-divider" /></li>
                                 <li><a className="dropdown-item" href="../html/filter_custom.html">North</a></li>
                                 <li><a className="dropdown-item" href="../html/filter_custom.html">South</a></li>
                                 <li><a className="dropdown-item" href="../html/filter_custom.html">East</a></li>
                                 <li><a className="dropdown-item" href="../html/filter_custom.html">West</a></li>
-                                <li><hr className="dropdown-divider"/></li>
-                                <li style={{textAlign: 'center'}}>Building</li>
-                                <li><hr className="dropdown-divider"/></li>
+                                <li><hr className="dropdown-divider" /></li>
+                                <li style={{ textAlign: 'center' }}>Building</li>
+                                <li><hr className="dropdown-divider" /></li>
                                 <li><a className="dropdown-item" href="../html/filter_custom.html">Bill and Melinda Gates Center</a></li>
                                 <li><a className="dropdown-item" href="../html/filter_custom.html">Odegaard Library</a></li>
                                 <li><a className="dropdown-item" href="../html/filter_custom.html">Suzzallo and Allen Libraries</a></li>
@@ -57,8 +57,8 @@ export default function Blog() {
                         </li>
 
                         <form className="d-flex" role="search">
-                            <input className="ss form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-                                <button className="ss btn btn-outline-success" type="submit">Search</button>
+                            <input className="ss form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                            <button className="ss btn btn-outline-success" type="submit">Search</button>
                         </form>
                     </ul>
                 </div>
@@ -72,7 +72,7 @@ export default function Blog() {
                             <div className="card-body">
                                 <div className="row">
                                     <div className="ci col col-sm-auto col-xl-12">
-                                        <img className="pb-3" src="../img/cs_building.jpg" alt="cs_building"/>
+                                        <img className="pb-3" src="../img/cs_building.jpg" alt="cs_building" />
                                     </div>
                                     <div className="col-sm">
                                         <h2 className="card-title">Bill and Melinda Gates Center</h2>
@@ -98,7 +98,7 @@ export default function Blog() {
                             <div className="card-body">
                                 <div className="row">
                                     <div className="ci col col-sm-auto col-xl-12">
-                                        <img className="pb-3" src="../img/ode.jpg" alt="ode"/>
+                                        <img className="pb-3" src="../img/ode.jpg" alt="ode" />
                                     </div>
                                     <div className="col-sm">
                                         <h2 className="card-title">Odegaard Library</h2>
@@ -124,7 +124,7 @@ export default function Blog() {
                             <div className="card-body">
                                 <div className="row">
                                     <div className="ci col col-sm-auto col-xl-12">
-                                        <img className="pb-3" src="../img/suzzallo.jpg" alt="suzzallo"/>
+                                        <img className="pb-3" src="../img/suzzallo.jpg" alt="suzzallo" />
                                     </div>
                                     <div className="col-sm">
                                         <h2 className="card-title">Suzzallo and Allen Libraries</h2>
@@ -150,7 +150,7 @@ export default function Blog() {
                             <div className="card-body">
                                 <div className="row">
                                     <div className="ci col col-sm-auto col-xl-12">
-                                        <img className="pb-3" src="../img/nano.jpg" alt="nano"/>
+                                        <img className="pb-3" src="../img/nano.jpg" alt="nano" />
                                     </div>
                                     <div className="col-sm">
                                         <h2 className="card-title">Nanoengineering & Sciences</h2>
@@ -177,7 +177,7 @@ export default function Blog() {
                             <div className="card-body">
                                 <div className="row">
                                     <div className="ci col col-sm-auto col-xl-12">
-                                        <img className="pb-3" src="../img/plus.png" alt="plus"/>
+                                        <img className="pb-3" src="../img/plus.png" alt="plus" />
                                     </div>
                                     <div className="col-sm">
                                         <h2 className="card-title">Add Custom Spot</h2>
