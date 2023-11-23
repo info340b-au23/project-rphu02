@@ -26,7 +26,6 @@ export function BuildingCard(props) {
               {liStars}
               <div className="row">
                 <div className="b">
-                  <a className="btn btn-dark" href="">Map</a>
                   <a className="btn btn-dark" href="../html/Map.html">Map</a>
                   <Link to={`/BlogForum/${props.building.name}`}>
                     <a className="btn btn-dark">Learn More</a>

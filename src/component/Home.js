@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     return (
@@ -17,11 +18,13 @@ const Home = () => {
                                             <img src="img/suzzallo.jpg" alt="the suzzallo library" className="pb-3" />
                                         </div>
                                         <div className="col-sm">
-                                            <h2 className="card-title">Suzallo and Allen Libraries</h2>
+                                            <h2 className="card-title">Suzzallo and Allen Libraries</h2>
                                             <p className="card-text">Famous for the Hogwarts-esque Reading Room, the Suzallo and Allen Library provide many UW
                                                 students a quiet and calming enviornment to get some extra studying in.
                                             </p>
-                                            <a href="/" className="btn btn-dark">Learn More</a>
+                                            <Link to={`/BlogForum/Suzzallo and Allen Libraries`}>
+                                            <a className="btn btn-dark">Learn More</a>
+                                             </Link>
                                         </div>
                                     </div>
                                 </div>
@@ -40,7 +43,9 @@ const Home = () => {
                                             <p className="card-text">Home to UW's beloved computer science program, the Bill and Melinda
                                                 Gates Center welcomes all students to its modern facility.
                                             </p>
-                                            <a href="/" className="btn btn-dark">Learn More</a>
+                                            <Link to={`/BlogForum/Bill and Melinda Gates Center`}>
+                                            <a className="btn btn-dark">Learn More</a>
+                                             </Link>
                                         </div>
                                     </div>
                                 </div>
@@ -59,7 +64,9 @@ const Home = () => {
                                             <p className="card-text">Located near the center of campus, this building is a
                                                 well-frequented study area for many STEM students.
                                             </p>
-                                            <a href="/" className="btn btn-dark">Learn More</a>
+                                            <Link to={`/BlogForum/Nanoengineering & Sciences`}>
+                                            <a className="btn btn-dark">Learn More</a>
+                                             </Link>
                                         </div>
                                     </div>
                                 </div>
