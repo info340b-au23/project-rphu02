@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Bill and Melinda Gates Center",
+        "user": "sudo",
+        "rating": 3,
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet,fuga?"
+    },
+    {
+        "name": "Bill and Melinda Gates Center",
+        "user": "sudo",
+        "rating": 4,
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet,fuga?"
+    },
+    {
+        "name": "Bill and Melinda Gates Center",
+        "user": "sudo",
+        "rating": 5,
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet,fuga?"
+    },
+    {
+        "name": "Odegaard Library",
+        "user": "sudo",
+        "rating": 5,
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet,fuga?"
+    },
+    {
+        "name": "Suzzallo and Allen Libraries",
+        "user": "sudo",
+        "rating": 4,
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet,fuga?"
+    },
+    {
+        "name": "Suzzallo and Allen Libraries",
+        "user": "sudo",
+        "rating": 5,
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet,fuga?"
+    },
+    {
+        "name": "Commuter and Transfer Commons",
+        "user": "sudo",
+        "rating": 3,
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet,fuga?"
+    },
+    {
+        "name": "Allen Library",
+        "user": "sudo",
+        "rating": 2,
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet,fuga?"
+    }
+]

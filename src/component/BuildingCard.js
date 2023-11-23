@@ -1,4 +1,5 @@
 import React, { useState } from 'react'; //import React Component
+import { Link } from 'react-router-dom';
 
 export function BuildingCard(props) {
   var liStars = [
@@ -26,7 +27,10 @@ export function BuildingCard(props) {
               <div className="row">
                 <div className="b">
                   <a className="btn btn-dark" href="">Map</a>
-                  <a className="btn btn-dark ba" href="">Learn More</a>
+                  <a className="btn btn-dark" href="../html/Map.html">Map</a>
+                  <Link to={`/BlogForum/${props.building.name}`}>
+                    <a className="btn btn-dark">Learn More</a>
+                  </Link>
                 </div>
               </div>
             </div>
