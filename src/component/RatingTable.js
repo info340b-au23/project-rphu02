@@ -9,9 +9,9 @@ export default function RatingTable(props) {
     })
 
     return (
-        <div class="card mb-4">
-            <div class="card-body">
-                <h2 class="card-title">Student Reviews</h2>
+        <div className="card mb-4">
+            <div className="card-body">
+                <h2 className="card-title">Student Reviews</h2>
                 {ratingCards}
             </div>
         </div>

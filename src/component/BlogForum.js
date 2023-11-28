@@ -18,19 +18,19 @@ export default function BlogForum(props) {
   console.log(selectedBuilding);
   return (
     <><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></link>
-    <div class="container">
-      <div class="row">
-        <div class="col col-sm-12 col-md-6 col-xl-4 d-flex">
-          <div class="card mb-4">
-            <div class="card-body">
+    <div className="container">
+      <div className="row">
+        <div className="col col-sm-12 col-md-6 col-xl-4 d-flex">
+          <div className="card mb-4">
+            <div className="card-body">
               <RatingInfo building={selectedBuilding} ratings={selectedRatings}/>
             </div>
           </div>
         </div>
-        <div class="col col-sm-12 col-md-6 col-lg">
-          <div class="card mb-4">
-            <div class="card-body">
-              <h2 class="card-title">Leave a Review</h2>
+        <div className="col col-sm-12 col-md-6 col-lg">
+          <div className="card mb-4">
+            <div className="card-body">
+              <h2 className="card-title">Leave a Review</h2>
               <ReviewForm/>
             </div>
           </div>

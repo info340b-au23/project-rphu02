@@ -23,11 +23,11 @@ const Home = () => {
                                                 students a quiet and calming enviornment to get some extra studying in.
                                             </p>
                                             <div className="b">
-                                                <Link to={'/Map'}>
-                                                    <a className="btn btn-dark">Map</a>
+                                                <Link to={'/Map'} className="btn btn-dark">
+                                                    Map
                                                 </Link>
-                                                <Link to={`/BlogForum/Suzzallo and Allen Libraries`}>
-                                                    <a className="btn btn-dark">Learn More</a>
+                                                <Link to={`/BlogForum/Suzzallo and Allen Libraries`} className="btn btn-dark">
+                                                    Learn More
                                                 </Link>
                                             </div>
                                         </div>
@@ -49,11 +49,11 @@ const Home = () => {
                                                 Gates Center welcomes all students to its modern facility.
                                             </p>
                                             <div className="b">
-                                                <Link to={'/Map'}>
-                                                    <a className="btn btn-dark">Map</a>
+                                                <Link to={'/Map'} className="btn btn-dark">
+                                                    Map
                                                 </Link>
-                                                <Link to={`/BlogForum/Bill and Melinda Gates Center`}>
-                                                    <a className="btn btn-dark">Learn More</a>
+                                                <Link to={`/BlogForum/Bill and Melinda Gates Center`} className="btn btn-dark">
+                                                    Learn More
                                                 </Link>
                                             </div>
                                         </div>
@@ -75,11 +75,11 @@ const Home = () => {
                                                 well-frequented study area for many STEM students.
                                             </p>
                                             <div className="b">
-                                                <Link to={'/Map'}>
-                                                    <a className="btn btn-dark">Map</a>
+                                                <Link to={'/Map'} className="btn btn-dark">
+                                                    Map
                                                 </Link>
-                                                <Link to={`/BlogForum/Nanoengineering & Sciences`}>
-                                                    <a className="btn btn-dark">Learn More</a>
+                                                <Link to={`/BlogForum/Nanoengineering & Sciences`} className="btn btn-dark">
+                                                    Learn More
                                                 </Link>
                                             </div>
                                         </div>

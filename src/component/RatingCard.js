@@ -14,9 +14,9 @@ export default function RatingCard(props){
       }
 
     return (
-        <div class="card mb-4">
-                <div class="card-body">
-                  <h6 class="card-title">{review.user}</h6>
+        <div className="card mb-4">
+                <div className="card-body">
+                  <h6 className="card-title">{review.user}</h6>
                   {liStars}
                   <p>{review.description}</p>
                 </div>

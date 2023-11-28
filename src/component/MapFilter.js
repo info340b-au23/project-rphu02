@@ -65,7 +65,7 @@ function DropdownMenuBig(props) {  //expect a title and items prop
                 {props.title}
             </label>
             {props.items.map((item) => (
-                <div className="form-check">
+                <div key={item.id} className="form-check">
                     <input className="form-check-input" type="checkbox" id={item.id + 'Checkbox'} />
                     <label className="form-check-label md-Selc-Text" htmlFor={item.id + 'Checkbox'}>
                         {item.label}
@@ -119,7 +119,7 @@ export function MapFilter() {
                 />
             </div>
             {/*Medium and larger filters*/}
-            <div class="row d-none d-md-block">
+            <div className="row d-none d-md-block">
                 <DropdownMenuBig
                     title="Area"
                     items={areas}

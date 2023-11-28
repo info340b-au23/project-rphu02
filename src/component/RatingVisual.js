@@ -41,58 +41,58 @@ export default function RatingGraph(props) {
         bucket[rating.rating - 1]++;
     }
     return (
-        <div class="row">
-            <div class="side">
+        <div className="row">
+            <div className="side">
                 <div>5 stars:</div>
                 <div>{fiveStar}</div>
             </div>
-            <div class="middle">
-                <div class="bar-container">
-                    <div class="bar-5" style={{ width: `${bucket[4] * 100 / ratings.length}%` }}></div>
+            <div className="middle">
+                <div className="bar-container">
+                    <div className="bar-5" style={{ width: `${bucket[4] * 100 / ratings.length}%` }}></div>
                 </div>
                 <div>{bucket[4]}</div>
             </div>
 
-            <div class="side">
+            <div className="side">
                 <div>4 stars:</div>
                 <div>{fourStar}</div>
             </div>
-            <div class="middle">
-                <div class="bar-container">
-                    <div class="bar-5" style={{ width: `${bucket[3] * 100 / ratings.length}%` }}></div>
+            <div className="middle">
+                <div className="bar-container">
+                    <div className="bar-5" style={{ width: `${bucket[3] * 100 / ratings.length}%` }}></div>
                 </div>
                 <div>{bucket[3]}</div>
             </div>
 
-            <div class="side">
+            <div className="side">
                 <div>3 stars:</div>
                 <div>{threeStar}</div>
             </div>
-            <div class="middle">
-                <div class="bar-container">
-                    <div class="bar-5" style={{ width: `${bucket[2] * 100 / ratings.length}%` }}></div>
+            <div className="middle">
+                <div className="bar-container">
+                    <div className="bar-5" style={{ width: `${bucket[2] * 100 / ratings.length}%` }}></div>
                 </div>
                 <div>{bucket[2]}</div>
             </div>
 
-            <div class="side">
+            <div className="side">
                 <div>2 stars:</div>
                 <div>{twoStar}</div>
             </div>
-            <div class="middle">
-                <div class="bar-container">
-                    <div class="bar-5" style={{ width: `${bucket[1] * 100 / ratings.length}%` }}></div>
+            <div className="middle">
+                <div className="bar-container">
+                    <div className="bar-5" style={{ width: `${bucket[1] * 100 / ratings.length}%` }}></div>
                 </div>
                 <div>{bucket[1]}</div>
             </div>
 
-            <div class="side">
+            <div className="side">
                 <div>1 star:</div>
                 <div>{oneStar}</div>
             </div>
-            <div class="middle">
-                <div class="bar-container">
-                    <div class="bar-5" style={{ width: `${bucket[0] * 100 / ratings.length}%` }}></div>
+            <div className="middle">
+                <div className="bar-container">
+                    <div className="bar-5" style={{ width: `${bucket[0] * 100 / ratings.length}%` }}></div>
                 </div>
                 <div>{bucket[0]}</div>
             </div>

@@ -26,11 +26,11 @@ export function BuildingCard(props) {
               {liStars}
               <div className="row">
                 <div className="b">
-                  <Link to={'/Map'}>
-                    <a className="btn btn-dark">Map</a>
+                  <Link to={'/Map'} className="btn btn-dark">
+                    Map
                   </Link>
-                  <Link to={`/BlogForum/${props.building.name}`}>
-                    <a className="btn btn-dark">Learn More</a>
+                  <Link to={`/BlogForum/${props.building.name}`} className="btn btn-dark">
+                    Learn More
                   </Link>
                 </div>
               </div>

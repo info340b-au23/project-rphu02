@@ -16,14 +16,14 @@ export default function RatingInfo(props) {
     }
 
     return (
-        <div class="row">
-            <div class="col col-sm-auto col-xl-12">
-                <img class="pb" src={`../${building.img}`} alt="cs_building" style={{ maxWidth: '100%' }} />
+        <div className="row">
+            <div className="col col-sm-auto col-xl-12">
+                <img className="pb" src={`../${building.img}`} alt="cs_building" style={{ maxWidth: '100%' }} />
             </div>
-            <div class="col-sm">
-                <h2 class="card-title">{building.name}</h2>
-                <p class="card-text">{building.description}</p>
-                <div class="row">
+            <div className="col-sm">
+                <h2 className="card-title">{building.name}</h2>
+                <p className="card-text">{building.description}</p>
+                <div className="row">
                     <div>
                         <p>Rating: {building.rating} / 5.0 ({ratings.length} Reviews)</p>
                         {liStars}
@@ -31,14 +31,14 @@ export default function RatingInfo(props) {
                 </div>
             </div>
             <RatingGraph ratings={ratings}/>
-            <div class="row rating">
+            <div className="row rating">
 
-                <div class="col-12">
-                    <div class="card mb-4">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col col-sm-auto col-xl-12">
-                                    <a class="btn btn-dark" href="#comment_field">Add Your
+                <div className="col-12">
+                    <div className="card mb-4">
+                        <div className="card-body">
+                            <div className="row">
+                                <div className="col col-sm-auto col-xl-12">
+                                    <a className="btn btn-dark" href="#comment_field">Add Your
                                         Own Review!</a>
                                 </div>
                             </div>
