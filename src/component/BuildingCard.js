@@ -14,7 +14,7 @@ export function BuildingCard(props) {
 
 
   return (
-      <><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></link><div className="col col-md-6 col-xl-4 d-flex">
+    <><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></link><div className="col col-md-6 col-xl-4 d-flex">
       <div className="card mb-4">
         <div className="card-body">
           <div className="row">
@@ -26,7 +26,9 @@ export function BuildingCard(props) {
               {liStars}
               <div className="row">
                 <div className="b">
-                  <a className="btn btn-dark" href="../html/Map.html">Map</a>
+                  <Link to={'/Map'}>
+                    <a className="btn btn-dark">Map</a>
+                  </Link>
                   <Link to={`/BlogForum/${props.building.name}`}>
                     <a className="btn btn-dark">Learn More</a>
                   </Link>

@@ -22,9 +22,14 @@ const Home = () => {
                                             <p className="card-text">Famous for the Hogwarts-esque Reading Room, the Suzallo and Allen Library provide many UW
                                                 students a quiet and calming enviornment to get some extra studying in.
                                             </p>
-                                            <Link to={`/BlogForum/Suzzallo and Allen Libraries`}>
-                                            <a className="btn btn-dark">Learn More</a>
-                                             </Link>
+                                            <div className="b">
+                                                <Link to={'/Map'}>
+                                                    <a className="btn btn-dark">Map</a>
+                                                </Link>
+                                                <Link to={`/BlogForum/Suzzallo and Allen Libraries`}>
+                                                    <a className="btn btn-dark">Learn More</a>
+                                                </Link>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -43,9 +48,14 @@ const Home = () => {
                                             <p className="card-text">Home to UW's beloved computer science program, the Bill and Melinda
                                                 Gates Center welcomes all students to its modern facility.
                                             </p>
-                                            <Link to={`/BlogForum/Bill and Melinda Gates Center`}>
-                                            <a className="btn btn-dark">Learn More</a>
-                                             </Link>
+                                            <div className="b">
+                                                <Link to={'/Map'}>
+                                                    <a className="btn btn-dark">Map</a>
+                                                </Link>
+                                                <Link to={`/BlogForum/Bill and Melinda Gates Center`}>
+                                                    <a className="btn btn-dark">Learn More</a>
+                                                </Link>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -64,9 +74,14 @@ const Home = () => {
                                             <p className="card-text">Located near the center of campus, this building is a
                                                 well-frequented study area for many STEM students.
                                             </p>
-                                            <Link to={`/BlogForum/Nanoengineering & Sciences`}>
-                                            <a className="btn btn-dark">Learn More</a>
-                                             </Link>
+                                            <div className="b">
+                                                <Link to={'/Map'}>
+                                                    <a className="btn btn-dark">Map</a>
+                                                </Link>
+                                                <Link to={`/BlogForum/Nanoengineering & Sciences`}>
+                                                    <a className="btn btn-dark">Learn More</a>
+                                                </Link>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
