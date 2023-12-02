@@ -88,20 +88,13 @@
  }
 
  .bnav {
-   padding-top: 1rem;
-   padding-left: 1.5rem;
+   padding-top: 2rem;
+   margin: auto;
+   width: 95%;
+
  }
 
- /* .ddm {
-    background-color: white;
-    border: 2px solid gray; 
-    border-radius: 10px;
-    font-size: 20px;
-  } */
 
- /* .dd{
-    padding-right:30px;
-   } */
 
  .checked {
    color: orange;
@@ -177,3 +170,41 @@
      width: auto;
    }
  }
+
+.qm {
+  margin-left: -1rem;
+}
+
+.col-auto {
+  position: relative;
+}
+
+.hovertext {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  width: 25rem; /* Set the width to your desired value */
+}
+
+.col-auto:hover .hovertext {
+  background-color: #F0F8FF;
+  display: block;
+}
+
+.fa-question-circle:hover + .hovertext {
+  display: block;
+}
+
+
+
+
+
+ 

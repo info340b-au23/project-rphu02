@@ -5,37 +5,39 @@ import { NavMain } from './Navigation';
 import buildings from "../data/buildings.json"
 
 export default function Blog(props) {
+    const [includeps, Setincludeps] = useState(false);
     const [partySize, SetpartySize] = useState("");
+    const [rating, Setrating] = useState("");
     const [noiseLevel, SetnoiseLevel] = useState("");
-    const [location, Setlocation] = useState("");
+    const [area, Setarea] = useState("");
     const [buildingName, SetbuildingName] = useState("");
-    const [searchBuilding, SetsearchBuilding] = useState("");
-    function applyFilter(partysize, noiselevel, location, buildingName, searchbuilding) {
+    function applyFilter(includeps, partysize, rating, noiselevel, buildingName, area) {
+        Setincludeps(includeps);
         SetpartySize(partysize);
+        Setrating(rating);
         SetnoiseLevel(noiselevel);
-        Setlocation(location);
+        Setarea(area);
         SetbuildingName(buildingName);
-        SetsearchBuilding(searchbuilding);
       }
       // for the filtering in blog nav bar
       var displayedData = buildings;
-      const filternull = [partySize, noiseLevel, location, buildingName, searchBuilding];
+      const filternull = [partySize, rating, noiseLevel, buildingName, area];
       for (let i = 0; i < filternull.length; i++) {
         if (filternull[i] !== "") {
           if (i === 0) {
-            displayedData = displayedData.filter((building) => ((partySize === "6+") ? parseInt(partySize[0]) <= building.maxpartySize : partySize <= building.maxpartySize));
+            displayedData = displayedData.filter((building) => ((includeps) ? partySize <= building.maxpartySize : partySize == building.maxpartySize));
           }
           else if (i === 1) {
-            displayedData = displayedData.filter((building) => (noiseLevel === building.noiseLevel));
+            displayedData = displayedData.filter((building) => (rating == building.rating));
           }
           else if (i === 2) {
-            displayedData = displayedData.filter((building) => (location === building.area));
+            displayedData = displayedData.filter((building) => (noiseLevel === building.noiseLevel));
           }
           else if (i === 3) {
             displayedData = displayedData.filter((building) => (buildingName === building.location));
           }
           else if (i === 4) {
-            displayedData = displayedData.filter((building) => (searchBuilding === building.location));
+            displayedData = displayedData.filter((building) => (area === building.area));
           }
         }
       }
@@ -51,7 +53,7 @@ export default function Blog(props) {
             <h1>BLOG</h1>
         </header><main>
                 <NavBlog building={uniqueBuildingArray} area={uniqueAreaArray} applyFilterCallback={applyFilter} />
-                <BuildingCardTable buildingList={displayedData} />
+                <BuildingCardTable buildingList={displayedData} building={uniqueBuildingArray} area={uniqueAreaArray}/>
             </main></>
     );
 }

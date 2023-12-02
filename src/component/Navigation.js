@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export function NavMain() {
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></link><nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
         <a className="navbar-brand" href="#"><img src="../img/book.png" /></a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -24,17 +24,18 @@ export function NavMain() {
           </ul>
         </div>
       </div>
-    </nav>
+    </nav></>
   )
 }
 
 export function NavBlog(props) {
 
-  const [noiseLevel, SetnoiseLevel] = useState("");
+  const [includeps, Setincludeps] = useState(false);
   const [partySize, SetpartySize] = useState("");
-  const [location, Setlocation] = useState("");
+  const [rating, Setrating] = useState("");
+  const [noiseLevel, SetnoiseLevel] = useState("");
+  const [area, Setarea] = useState("");
   const [buildingName, SetbuildingName] = useState("");
-  const [searchBuilding, SetsearchBuilding] = useState("");
 
   const liBuildings = props.building.map((building) => {
     return <option key={building} value={building}>{building}</option>;
@@ -44,38 +45,41 @@ export function NavBlog(props) {
     return <option key={area} value={area}>{area}</option>;
   });
 
-
-  function nlCallBack(event) {
-    SetnoiseLevel(event.target.value);
+  function psioCallBack(event) {
+    Setincludeps(event.target.checked);
   }
   function psCallBack(event) {
     SetpartySize(event.target.value);
   }
+  function rCallBack(event) {
+    Setrating(event.target.value);
+  }
+  function nlCallBack(event) {
+    SetnoiseLevel(event.target.value);
+  }
   function lCallBack(event) {
-    Setlocation(event.target.value);
+    Setarea(event.target.value);
   }
   function bnCallBack(event) {
     SetbuildingName(event.target.value);
   }
-  function sbCallBack(event) {
-    SetsearchBuilding(event.target.value);
-  }
   function buttonCallBack(event) {
-    props.applyFilterCallback(partySize, noiseLevel, location, buildingName, searchBuilding);
+    props.applyFilterCallback(includeps, partySize, rating, noiseLevel, buildingName, area);
   }
 
   function clearCallBack(event) {
-    props.applyFilterCallback("", "", "", "", "");
+    props.applyFilterCallback(false, "", "", "", "", "");
     document.getElementById("nl").selectedIndex = 0;
+    document.getElementById("r").selectedIndex = 0;
     document.getElementById("ps").selectedIndex = 0;
     document.getElementById("l").selectedIndex = 0;
     document.getElementById("b").selectedIndex = 0;
+    Setincludeps(false);
     SetpartySize("");
+    Setrating("");
     SetnoiseLevel("");
-    Setlocation("");
+    Setarea("");
     SetbuildingName("");
-    SetsearchBuilding("");
-    
   }
 
   return (
@@ -83,6 +87,74 @@ export function NavBlog(props) {
       <div className="col-auto">
         <button id="submitButton" type="submit" className="btn btn-warning" onClick={clearCallBack}>Clear</button>
       </div>
+
+      <div className="col-auto">
+        <select id="ps" className="form-select" value={partySize} onChange={psCallBack}>
+          <option value="">Party Size</option>
+          <option key={1} value={1}>1</option>
+          <option key={2} value={2}>2</option>
+          <option key={3} value={3}>3</option>
+          <option key={4} value={4}>4</option>
+          <option key={5} value={5}>5</option>
+          <option key={6} value={6}>6</option>
+        </select>
+      </div>
+
+      <div className="col-auto">
+        <div className="qm">
+          <i className="fa fa-question-circle"></i>
+        </div>
+        <div className="hovertext">
+          This is just a recommended max party size or the max number of people that could be seated at this study spot,
+          by selecting for example 3 that means that this spot can be seat up to a party size of 3,
+          this means that this spot allows up to a party size of 3 but a party size of 2 and 1 is also allowed.
+        </div>
+      </div>
+
+      <div className="col-auto">
+        <div className="form-check">
+          <input id="runnerupCheckbox" type="checkbox" className="form-check-input" value="" checked={includeps} onChange={psioCallBack} />
+          <label htmlFor="runnerupCheckbox" className="form-check-label">Include Other</label>
+        </div>
+      </div>
+
+      <div className="col-auto">
+        <div className="qm">
+          <i className="fa fa-question-circle"></i>
+        </div>
+        <div className="hovertext">
+          By checking this box, it means that we are allowing other places to be displayed that can hold up to the recommended party size
+          that was selected
+          for example by selecting 1 and chcecking include other box, it means that we have a max party size of 1 and we are displaying
+          spots that you could potentially study at even if the recommended party size is 2, 3, 4, 5, 6 because even if you have a party size of 1
+          you are still able to be seated here. while if you choose not to check this box, it will only display recommended spots
+          where the recommended party size is 1
+        </div>
+      </div>
+
+      <div className="col-auto">
+        <select id="r" className="form-select" value={rating} onChange={rCallBack}>
+          <option value="">Rating</option>
+          <option key={0o0} value={1}>0</option>
+          <option key={0o1} value={1}>1</option>
+          <option key={0o2} value={2}>2</option>
+          <option key={0o3} value={3}>3</option>
+          <option key={0o4} value={4}>4</option>
+          <option key={0o5} value={5}>5</option>
+        </select>
+      </div>
+
+      <div className="col-auto">
+        <div className="qm">
+          <i className="fa fa-question-circle"></i>
+        </div>
+        <div className="hovertext">
+          This is just an overall rating of your study spot from a scale of 1-5
+          where 1 where this spot is not very good and 5 mean it is the best spot you ever been too.
+          it is important to note that is this the overall rating of your study spot not overall rating of the building.
+        </div>
+      </div>
+
       <div className="col-auto">
         <select id="nl" className="form-select" value={noiseLevel} onChange={nlCallBack}>
           <option value="">Noise Level</option>
@@ -94,33 +166,64 @@ export function NavBlog(props) {
           <option key="Outside" value={"Outside"}>Outside</option>
         </select>
       </div>
+
       <div className="col-auto">
-        <select id="ps" className="form-select" value={partySize} onChange={psCallBack}>
-          <option value="">Party Size</option>
-          <option key={1} value={1}>1</option>
-          <option key={2} value={2}>2</option>
-          <option key={3} value={3}>3</option>
-          <option key={4} value={4}>4</option>
-          <option key={5} value={5}>5</option>
-          <option key={6} value={6}>6+</option>
+        <div className="qm">
+          <i className="fa fa-question-circle"></i>
+        </div>
+        <div className="hovertext">
+          This is just an overall noise level of your spot, different spots and area of the building have
+          different noise level so it is important to note that this is noise level for the spot itself
+          and not the building itself
+          for example: if the spot was the 2nd floor of the Hub, this area is generally pretty quiet, probably around a Normal to Whisper Level,
+          while the Hub itself is generally pretty loud, probably around a Presenter Level.
+          so the recommended noise level would be Whisper or Normal
+        </div>
+      </div>
+
+      <div className="col-auto" >
+        <select id="b" className="form-select" style={{ width: 200 }} value={buildingName} onChange={bnCallBack}>
+          <option value="">Building</option>
+          {liBuildings}
         </select>
       </div>
+
       <div className="col-auto">
-        <select id="l" className="form-select" value={location} onChange={lCallBack}>
+        <div className="qm">
+          <i className="fa fa-question-circle"></i>
+        </div>
+        <div className="hovertext">
+          This is just the name of the Building that your spot is located, this is different from the name of your spot
+          instead of focusing on the different areas located inside of the specific building, we are focusing on the building
+          itself that contains all of these spots.
+          examples includes: Ave, Suzzalo, Odegaard, Bill and Melinda Gates Center and etc..
+        </div>
+      </div>
+
+      <div className="col-auto">
+        <select id="l" className="form-select" value={area} onChange={lCallBack}>
           <option value="">Area</option>
           {liAreas}
         </select>
       </div>
 
       <div className="col-auto">
-        <select id="b" className="form-select" value={buildingName} onChange={bnCallBack}>
-          <option value="">Building</option>
-          {liBuildings}
-        </select>
+        <div className="qm">
+          <i className="fa fa-question-circle"></i>
+        </div>
+        <div className="hovertext">
+          This is just the general area that your spot is located,
+          this can be a little confusing but this differs from the building name but in some cases it can be the same,
+          throughout the campus, different buildings that are relatively close to eachother
+          can generally be grouped into the same general area
+          an good example is that Suzzalo, Odegaard and Kane Hall can all be grouped in the general area of Red Square
+        </div>
       </div>
+
       <div className="col-auto">
         <button id="submitButton" type="submit" className="btn btn-success" onClick={buttonCallBack}>Apply Filter</button>
       </div>
+
     </div>
   );
 }

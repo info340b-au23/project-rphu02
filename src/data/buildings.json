@@ -36,12 +36,12 @@
     "area": "The Fountain"
   },
   {
-    "name": "Paul G. Allen Center for Computer Science & Engineering (Allen Center)",
+    "name": "Allen Center",
     "img": "img/paul_allen.jpg",
     "maxpartySize": 3,
     "rating": 3,
     "noiseLevel": "Normal",
-    "location": "Paul G. Allen Center for Computer Science & Engineering (Allen Center)",
+    "location": "Paul G. Allen Center for Computer Science & Engineering ",
     "area": "East Campus"
   },
   {
