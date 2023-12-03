@@ -204,6 +204,31 @@
 }
 
 
+.addhovertext {
+  display: none;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  transform: translateX(-50%);
+  transform: translateY(-50%);
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  width: 25rem; /* Set the width to your desired value */
+}
+
+.col-auto:hover .addhovertext {
+  background-color: #F0F8FF;
+  display: block;
+}
+
+.add:hover + .addhovertext {
+  display: block;
+}
+
 
 
 

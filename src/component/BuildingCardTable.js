@@ -42,7 +42,77 @@ export function BuildingCardTable(props) {
                         <div className="col-sm">
                             <h2 className="card-title">Add Custom Spot</h2>
                             <p className="card-text">Have a secret study spot that you want people to know about? add it here!!!!</p>
-                            <button className="btn btn-dark" onClick={addcardCallBack}>Add</button>
+                            <div>
+                                <button className="btn btn-dark add" onClick={addcardCallBack}>Add</button>
+                                <div className="addhovertext">
+                                    <label htmlFor="img"> Select Image: </label>
+                                    <input type="file" id="img" accept="image/*" ></input>
+                                    <br></br>
+                                    <form>
+                                        <br></br>
+                                        <label htmlFor="sn">Spot Name: </label>
+                                        <input type="text" id="sn" name="sn" /><br></br>
+                                        <br></br>
+
+                                        <a>Noise Level: </a>
+                                        <select id="nl" className="form-select" style={{ width: 140 }}>
+                                            <option value="">Noise Level</option>
+                                            <option key="Silent" value={"Silent"}>Silent</option>
+                                            <option key="Whisper" value={"Whisper"}>Whisper</option>
+                                            <option key="Table Talk" value={"Table Talk"}>Table Talk</option>
+                                            <option key="Normal" value={"Normal"}>Normal</option>
+                                            <option key="Presenter" value={"Presenter"}>Presenter</option>
+                                            <option key="Outside" value={"Outside"}>Outside</option>
+                                        </select><br></br>
+
+                                        <a>Party Size: </a>
+                                        <select id="ps" className="form-select" style={{ width: 140 }}>
+                                            <option value="">Party Size</option>
+                                            <option key={1} value={1}>1</option>
+                                            <option key={2} value={2}>2</option>
+                                            <option key={3} value={3}>3</option>
+                                            <option key={4} value={4}>4</option>
+                                            <option key={5} value={5}>5</option>
+                                            <option key={6} value={6}>6+</option>
+                                        </select><br></br>
+
+                                        <a>Rating: </a>
+                                        <select id="r" className="form-select" style={{ width: 140 }}>
+                                            <option value="">Rating</option>
+                                            <option key={0o0} value={1}>0</option>
+                                            <option key={0o1} value={1}>1</option>
+                                            <option key={0o2} value={2}>2</option>
+                                            <option key={0o3} value={3}>3</option>
+                                            <option key={0o4} value={4}>4</option>
+                                            <option key={0o5} value={5}>5</option>
+                                        </select><br></br>
+
+                                        <a>Building </a>
+                                        <select id="bn" className="form-select" style={{ width: 140 }}>
+                                            <option value="">Building: </option>
+                                            {liBuildings}
+                                        </select>
+
+                                        <label htmlFor="bo">If not included above enter here: </label>
+                                        <input type="text" id="bo" name="bo" /><br></br>
+                                        <br></br>
+                                        
+                                        <a>Area</a>
+                                        <select id="ga" className="form-select" style={{ width: 140 }}>
+                                            <option value="">Area</option>
+                                            {liAreas}
+                                        </select>
+
+                                        <label htmlFor="ao">If not included above enter here: </label>
+                                        <input type="text" id="ao" name="ao" />
+                                        <br></br>
+
+                                        <br></br>
+                                        <button type="button" className="btn btn-success">Submit</button>
+
+                                    </form>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -94,7 +164,7 @@ export function BuildingCardTable(props) {
 
                         <a>Building </a>
                         <select id="bn" className="form-select" style={{ width: 140 }}>
-                        <option value="">Building</option>
+                            <option value="">Building</option>
                             {liBuildings}
                         </select>
 
@@ -103,14 +173,14 @@ export function BuildingCardTable(props) {
 
                         <a>Area</a>
                         <select id="ga" className="form-select" style={{ width: 140 }}>
-                        <option value="">Area</option>
+                            <option value="">Area</option>
                             {liAreas}
                         </select>
 
                         <label htmlFor="ao">Other: </label>
                         <input type="text" id="ao" name="ao" />
                         <br></br>
-                        
+
                         <button type="button" className="btn btn-success">Submit</button>
 
                     </form>
