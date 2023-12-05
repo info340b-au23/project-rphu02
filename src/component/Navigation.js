@@ -123,12 +123,8 @@ export function NavBlog(props) {
           <i className="fa fa-question-circle"></i>
         </div>
         <div className="hovertext">
-          By checking this box, it means that we are allowing other places to be displayed that can hold up to the recommended party size
-          that was selected
-          for example by selecting 1 and chcecking include other box, it means that we have a max party size of 1 and we are displaying
-          spots that you could potentially study at even if the recommended party size is 2, 3, 4, 5, 6 because even if you have a party size of 1
-          you are still able to be seated here. while if you choose not to check this box, it will only display recommended spots
-          where the recommended party size is 1
+          By checking this box, it means that we are allowing other places to be displayed that can hold up atleast recommended party size
+          that was selected, Example: selecting 4 and and checking this box will display spots where the recommended party size is 4, 5 and 6
         </div>
       </div>
 
@@ -174,10 +170,7 @@ export function NavBlog(props) {
         <div className="hovertext">
           This is just an overall noise level of your spot, different spots and area of the building have
           different noise level so it is important to note that this is noise level for the spot itself
-          and not the building itself
-          for example: if the spot was the 2nd floor of the Hub, this area is generally pretty quiet, probably around a Normal to Whisper Level,
-          while the Hub itself is generally pretty loud, probably around a Presenter Level.
-          so the recommended noise level would be Whisper or Normal
+          and not the building itself.
         </div>
       </div>
 
