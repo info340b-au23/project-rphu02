@@ -3,8 +3,22 @@ import { BuildingCardTable } from './BuildingCardTable';
 import { NavBlog } from './Navigation';
 import { NavMain } from './Navigation';
 import buildings from "../data/buildings.json"
+import { ref, child, get, getDatabase, push as firebasePush } from 'firebase/database'
 
 export default function Blog(props) {
+  const [data, Setdata] = useState([]);
+    const dbRef = ref(getDatabase());
+    get(child(dbRef, 'buildings/')).then((snapshot) => {
+        if (snapshot.exists()) {
+            const arrayOfObj = Object.entries(snapshot.val()).map((e) => ( e[1] ));
+            Setdata(arrayOfObj);
+        } else {
+            console.log("No data available");
+        }
+    }).catch((error) => {
+        console.error(error);
+    });
+
     const [includeps, Setincludeps] = useState(false);
     const [partySize, SetpartySize] = useState("");
     const [rating, Setrating] = useState("");
@@ -20,7 +34,7 @@ export default function Blog(props) {
         SetbuildingName(buildingName);
       }
       // for the filtering in blog nav bar
-      var displayedData = buildings;
+      var displayedData = data;
       const filternull = [partySize, rating, noiseLevel, buildingName, area];
       for (let i = 0; i < filternull.length; i++) {
         if (filternull[i] !== "") {
@@ -43,9 +57,9 @@ export default function Blog(props) {
       }
       //console.log(displayedData);
     
-      const uniqueBuildingSet = new Set(buildings.map(building => building.location));
+      const uniqueBuildingSet = new Set(data.map(building => building.location));
       const uniqueBuildingArray = [...uniqueBuildingSet];
-      const uniqueAreaSet = new Set(buildings.map(building => building.area));
+      const uniqueAreaSet = new Set(data.map(building => building.area));
       const uniqueAreaArray = [...uniqueAreaSet];
     
     return (

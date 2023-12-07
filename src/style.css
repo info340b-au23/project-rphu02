@@ -221,7 +221,7 @@
 }
 
 
-.add:active + .addhovertext {
+.add:focus + .addhovertext {
   display: block;
   background-color: lightgrey;
 }
