@@ -29,6 +29,7 @@ export function BuildingCardTable(props) {
     const [partySize, SetpartySize] = useState("");
     const [rating, Setrating] = useState("");
     const [buildingName, SetbuildingName] = useState("");
+    const [address, Setaddress] = useState("");
     const [area, Setarea] = useState("");
     const [bdisabled, Setbdisabled] = useState(true);
     const [adisabled, Setadisabled] = useState(true);
@@ -60,6 +61,11 @@ export function BuildingCardTable(props) {
             Setbdisabled(true);
         }
     }
+
+    function addressCallBack(event) {
+        Setaddress(event.target.value);
+    }
+
     function aCallBack(event) {
         Setarea(event.target.value);
         if (event.target.value === "othera") {
@@ -103,6 +109,9 @@ export function BuildingCardTable(props) {
                 }
             }
         }
+        if (!address.trim()) {
+            validationErrors.address = 'address is required';
+        }
         if (!area.trim()) {
             validationErrors.area = 'General Area is required';
         }
@@ -115,16 +124,6 @@ export function BuildingCardTable(props) {
         }
         if (Object.keys(validationErrors).length === 0) {
             SetaddSubmit(true);
-            // document.getElementById("nl").selectedIndex = 0;
-            // document.getElementById("r").selectedIndex = 0;
-            // document.getElementById("ps").selectedIndex = 0;
-            // document.getElementById("l").selectedIndex = 0;
-            // document.getElementById("b").selectedIndex = 0;
-            // SetpartySize("");
-            // Setrating("");
-            // SetnoiseLevel("");
-            // Setarea("");
-            // SetbuildingName("");
             alert("Thank you for submitting a new spot!");
             // if the user has no errors in their form
             // get a reference to our database
@@ -264,6 +263,7 @@ export function BuildingCardTable(props) {
                                             <input type="text" id="bo" name="bo" disabled={bdisabled} value={tbuildingName} onChange={tbnCallBack} /><br></br>
                                             <br></br>
 
+
                                             <a>Area:</a>
                                             <select id="ga" className="form-select" style={{ width: 140 }} value={area} onChange={aCallBack}>
                                                 <option value="">Area</option>
@@ -273,6 +273,10 @@ export function BuildingCardTable(props) {
 
                                             <label htmlFor="tga">If other selected enter here: </label>
                                             <input type="text" id="tga" name="tga" disabled={adisabled} value={tarea} onChange={taCallBack} />
+                                            <br></br><br></br>
+
+                                            <label htmlFor="adrs">Address: </label>
+                                            <input type="text" id="adrs" name="adrs" value={address} onChange={addressCallBack} />
                                             <br></br>
                                         </form></Modal.Body>
                                     <Modal.Footer>
