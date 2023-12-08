@@ -1,120 +1,122 @@
-[
-  {
-    "name": "Bill and Melinda Gates Center",
-    "img": "img/cs_building.jpg",
-    "maxpartySize": 6,
-    "rating": 3,
-    "noiseLevel": "Normal",
-    "location": "Bill and Melinda Gates Center",
-    "area": "East Campus"
-  },
-  {
-    "name": "Odegaard Library",
-    "img": "img/ode.jpg",
-    "maxpartySize": 6,
-    "rating": 2,
-    "noiseLevel": "Presenter",
-    "location": "Odegaard Library",
-    "area": "Red Square"
-  },
-  {
-    "name": "Suzzallo and Allen Libraries",
-    "img": "img/suzzallo.jpg",
-    "maxpartySize": 6,
-    "rating": 4,
-    "noiseLevel": "Normal",
-    "location": "Suzzallo and Allen Libraries",
-    "area": "Red Square"
-  },
-  {
-    "name": "Nanoengineering & Sciences",
-    "img": "img/nano.jpg",
-    "maxpartySize": 4,
-    "rating": 3,
-    "noiseLevel": "Normal",
-    "location": "Nanoengineering & Sciences",
-    "area": "The Fountain"
-  },
-  {
-    "name": "Allen Center",
-    "img": "img/paul_allen.jpg",
-    "maxpartySize": 3,
-    "rating": 3,
-    "noiseLevel": "Normal",
-    "location": "Paul G. Allen Center for Computer Science & Engineering ",
-    "area": "East Campus"
-  },
-  {
-    "name": "Commuter & Transfer Commons",
-    "img": "img/commuter_lounge.jpg",
-    "maxpartySize": 4,
-    "rating": 3,
-    "noiseLevel": "Normal",
-    "location": "The Hub",
-    "area": "The Hub"
-  },
-  {
-    "name": "Allen Library",
-    "img": "img/allen_library.jpg",
-    "maxpartySize": 6,
-    "rating": 4,
-    "noiseLevel": "Normal",
-    "location": "Suzzallo and Allen Libraries",
-    "area": "The Hub"
-  },
-  {
-    "name": "The Bill and Melinda Gates Commons",
-    "img": "img/cs_common.jpg",
-    "maxpartySize": 3,
-    "rating": 4,
-    "noiseLevel": "Presenter",
-    "location": "Bill and Melinda Gates Center",
-    "area": "East Campus"
-  },
-  {
-    "name": "Harry Potter Library",
-    "img": "img/suzzallo_harry_potter.jpg",
-    "maxpartySize": 1,
-    "rating": 4,
-    "noiseLevel": "Silent",
-    "location": "Suzzallo and Allen Libraries",
-    "area": "Red Square"
-  },
-  {
-    "name": "Odegaard Library Quiet Study Area",
-    "img": "img/ode_quiet.jpg",
-    "maxpartySize": 1,
-    "rating": 4,
-    "noiseLevel": "Silent",
-    "location": "Odegaard Library",
-    "area": "Red Square"
-  },
-  {
-    "name": "The Hub",
-    "img": "img/hub.jpg",
-    "maxpartySize": 4,
-    "rating": 4,
-    "noiseLevel": "Normal",
-    "location": "The Hub",
-    "area": "The Hub"
-  },
-  {
-    "name": "Mary Gates Hall",
-    "img": "img/mary_gates.jpg",
-    "maxpartySize": 6,
-    "rating": 4,
-    "noiseLevel": "Normal",
-    "location": "Mary Gates",
-    "area": "The Fountain"
-  },
-  {
-    "name": "PACCAR Hall",
-    "img": "img/paccar.jpg",
-    "maxpartySize": 4,
-    "rating": 4,
-    "noiseLevel": "Normal",
-    "location": "Paccar Hall",
-    "area": "The Quad"
+{
+  "buildings": {
+    "b1": {
+      "name": "Bill and Melinda Gates Center",
+      "img": "img/cs_building.jpg",
+      "maxpartySize": 6,
+      "rating": 3,
+      "noiseLevel": "Normal",
+      "location": "Bill and Melinda Gates Center",
+      "area": "East Campus"
+    },
+    "b2": {
+      "name": "Odegaard Library",
+      "img": "img/ode.jpg",
+      "maxpartySize": 6,
+      "rating": 2,
+      "noiseLevel": "Presenter",
+      "location": "Odegaard Library",
+      "area": "Red Square"
+    },
+    "b3": {
+      "name": "Suzzallo and Allen Libraries",
+      "img": "img/suzzallo.jpg",
+      "maxpartySize": 6,
+      "rating": 4,
+      "noiseLevel": "Normal",
+      "location": "Suzzallo and Allen Libraries",
+      "area": "Red Square"
+    },
+    "b4": {
+      "name": "Nanoengineering & Sciences",
+      "img": "img/nano.jpg",
+      "maxpartySize": 4,
+      "rating": 3,
+      "noiseLevel": "Normal",
+      "location": "Nanoengineering & Sciences",
+      "area": "The Fountain"
+    },
+    "b5": {
+      "name": "Allen Center",
+      "img": "img/paul_allen.jpg",
+      "maxpartySize": 3,
+      "rating": 3,
+      "noiseLevel": "Normal",
+      "location": "Paul G. Allen Center for Computer Science & Engineering ",
+      "area": "East Campus"
+    },
+    "b6": {
+      "name": "Commuter & Transfer Commons",
+      "img": "img/commuter_lounge.jpg",
+      "maxpartySize": 4,
+      "rating": 3,
+      "noiseLevel": "Normal",
+      "location": "The Hub",
+      "area": "The Hub"
+    },
+    "b7": {
+      "name": "Allen Library",
+      "img": "img/allen_library.jpg",
+      "maxpartySize": 6,
+      "rating": 4,
+      "noiseLevel": "Normal",
+      "location": "Suzzallo and Allen Libraries",
+      "area": "The Hub"
+    },
+    "b8": {
+      "name": "The Bill and Melinda Gates Commons",
+      "img": "img/cs_common.jpg",
+      "maxpartySize": 3,
+      "rating": 4,
+      "noiseLevel": "Presenter",
+      "location": "Bill and Melinda Gates Center",
+      "area": "East Campus"
+    },
+    "b9": {
+      "name": "Harry Potter Library",
+      "img": "img/suzzallo_harry_potter.jpg",
+      "maxpartySize": 1,
+      "rating": 4,
+      "noiseLevel": "Silent",
+      "location": "Suzzallo and Allen Libraries",
+      "area": "Red Square"
+    },
+    "b10": {
+      "name": "Odegaard Library Quiet Study Area",
+      "img": "img/ode_quiet.jpg",
+      "maxpartySize": 1,
+      "rating": 4,
+      "noiseLevel": "Silent",
+      "location": "Odegaard Library",
+      "area": "Red Square"
+    },
+    "b11": {
+      "name": "The Hub",
+      "img": "img/hub.jpg",
+      "maxpartySize": 4,
+      "rating": 4,
+      "noiseLevel": "Normal",
+      "location": "The Hub",
+      "area": "The Hub"
+    },
+    "b12": {
+      "name": "Mary Gates Hall",
+      "img": "img/mary_gates.jpg",
+      "maxpartySize": 6,
+      "rating": 4,
+      "noiseLevel": "Normal",
+      "location": "Mary Gates",
+      "area": "The Fountain"
+    },
+    "b13": {
+      "name": "PACCAR Hall",
+      "img": "img/paccar.jpg",
+      "maxpartySize": 4,
+      "rating": 4,
+      "noiseLevel": "Normal",
+      "location": "Paccar Hall",
+      "area": "The Quad"
+    }
   }
-]
+}
 
