@@ -4,55 +4,55 @@ function DropdownMenuSmall(props) { //expect a title and items prop
     // title: title
     // items: {id: 'id', label: 'label' etc.}
     const [selectedOption, setSelectedOption] = useState(props.title);
-    const toggleDropdown = (event) => {
-        setSelectedOption(event.target.value);
-    }
-
-    const menu = (
-        <div className="col d-flex d-md-none">
-            <select id={props.title} className="form-select" value={selectedOption} onChange={toggleDropdown}>
-                <option value="">{props.title}</option>
-                {props.items.map((item) => (
-                    <option key={item.id} value={item.label}>{item.label}</option>
-                ))}
-            </select>
-        </div>
-    )
-    // const [isOpen,setIsOpen] = useState(false);
-
-    // let collapse ='';
-    // const toggleDropdown = () => {
-    //     setIsOpen(!isOpen);
-    // };
-    // if (isOpen) {
-    //     collapse = 'collapse show';
-    // } else {
-    //     collapse = 'collapse'
+    // const toggleDropdown = (event) => {
+    //     setSelectedOption(event.target.value);
     // }
 
     // const menu = (
     //     <div className="col d-flex d-md-none">
-    //         <div className="form-check">
-    //             <label className="form-check-label" onClick={toggleDropdown}>
-    //                 <button className="btn btn-lightrounded-0 w-100 bg-white" type="button">
-    //                     {props.title}
-    //                 </button>
-    //             </label>
-    //             <div className={collapse}>
-    //                 {isOpen && (
-    //                     props.items.map((item) => (
-    //                         <div key={item.id} className="form-check">
-    //                             <input className="form-check-input" type="checkbox" id={item.id + 'Checkbox'} />
-    //                             <label className="form-check-label" htmlFor={item.id + 'Checkbox'}>
-    //                                 {item.label}
-    //                             </label>
-    //                         </div>
-    //                     ))
-    //                 )}
-    //             </div>
-    //         </div>
-    //     </div >
-    // );
+    //         <select id={props.title} className="form-select" value={selectedOption} onChange={toggleDropdown}>
+    //             <option value="">{props.title}</option>
+    //             {props.items.map((item) => (
+    //                 <option key={item.id} value={item.label}>{item.label}</option>
+    //             ))}
+    //         </select>
+    //     </div>
+    // )
+    const [isOpen,setIsOpen] = useState(false);
+
+    let collapse ='';
+    const toggleDropdown = () => {
+        setIsOpen(!isOpen);
+    };
+    if (isOpen) {
+        collapse = 'collapse show';
+    } else {
+        collapse = 'collapse'
+    }
+
+    const menu = (
+        <div className="col d-flex d-md-none">
+            <div className="form-check">
+                <label className="form-check-label" onClick={toggleDropdown}>
+                    <button className="btn btn-lightrounded-0 w-100 bg-white" type="button">
+                        {props.title}
+                    </button>
+                </label>
+                <div className={collapse}>
+                    {isOpen && (
+                        props.items.map((item) => (
+                            <div key={item.id} className="form-check">
+                                <input className="form-check-input" type="checkbox" id={item.id + 'Checkbox'} />
+                                <label className="form-check-label" htmlFor={item.id + 'Checkbox'}>
+                                    {item.label}
+                                </label>
+                            </div>
+                        ))
+                    )}
+                </div>
+            </div>
+        </div >
+    );
     return menu;
 }
 
