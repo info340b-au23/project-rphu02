@@ -1,8 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Map } from './Map';
 import { MapFilter } from './MapFilter';
-import { Search } from './MapSearch';
-export default function MapPage() {
+
+export default function MapPage(props) {
+    // Starting value for filters
+    const initialFilters = {
+        rating: '',
+        area: '',
+        partySize: '',
+        noiseSelector: '',
+    };
+
+    // state filters
+    const [selectedFilters, setSelectedFilters] = useState(initialFilters);
+
+    // change filters
+    const handleFilterChange = (filterKey, value) => {
+        console.log(`Filter changed: ${filterKey} - ${value}`);
+        setSelectedFilters((prevFilters) => ({
+            ...prevFilters,
+            [filterKey]: value,
+        }));
+    };
+
     return (
         <main>
             <header>
@@ -13,14 +33,12 @@ export default function MapPage() {
                 <div className="container-fluid">
                     <div className="row no-gutters">
                         {/* <!--Map--> */}
-                        <Map />
-                        {/* Search bar */}
-                        <div className="col-sm-12 col-md-3 order-first order-md-last m-0 p-0">
+                        <Map selectedFilters={selectedFilters} />
+                        <div className="colorder-first m-0 p-0">
                             <div className="card rounded-0 border-0 m-0 p-0">
                                 <div className="col-sections container-fluid m-0 p-0">
-                                    <Search />
                                     {/*Map Filters*/}
-                                    <MapFilter />
+                                    <MapFilter onFilterChange={handleFilterChange} selectedFilters={selectedFilters} />
                                 </div>
                             </div>
                         </div>
