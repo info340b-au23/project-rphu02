@@ -234,6 +234,14 @@
   outline: 3px solid green;
 }
 
+.humans {
+  text-align: right;
+  padding-right: 1.5rem;
+}
+
+.cardBottom {
+  bottom: 0;
+}
 
 
 
