@@ -3,7 +3,7 @@
    top: 0;
    left: 0;
    width: 100%;
-   color: white;
+   color: #f0f0f0;
    background-color: rgb(228, 54, 228);
    padding: .5rem;
    padding-bottom: 1rem;
@@ -60,7 +60,8 @@
  }
 
  .card {
-   background-color: #a987ee;
+   background-color: #f0f0f0;
+   border: 5px solid #4b2e83;
    border-radius: 10px;
     /* Add shadows to create the "card" effect */
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -132,7 +133,7 @@
    width: 100%;
    background-color: gainsboro;
    text-align: center;
-   color: white;
+   color: #f0f0f0;
  }
 
  .bar-5 {

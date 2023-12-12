@@ -1,11 +1,9 @@
 import React, { useState } from 'react'; //import React Component
 import { BuildingCardTable } from './BuildingCardTable';
 import { NavBlog } from './Navigation';
-import { NavMain } from './Navigation';
-import buildings from "../data/buildings.json"
 import { ref, child, get, getDatabase, push as firebasePush } from 'firebase/database'
 
-export default function Blog(props) {
+export default function Blog() {
   const [data, Setdata] = useState([]);
     const dbRef = ref(getDatabase());
     get(child(dbRef, '/buildings/buildings')).then((snapshot) => {

@@ -7,7 +7,7 @@ import Blog from './component/Blog';
 import Footer from './component/Footer';
 import BlogForum from './component/BlogForum';
 
-function App(props) {
+function App() {
   return (
     <Router>
       <div>

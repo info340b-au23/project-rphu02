@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
-import BUILDINGS from './data/buildings.json'; //the data to display
 import { ref, child, getDatabase } from 'firebase/database';
 // Import the functions you need from the SDKs you need
 import { initializeApp } from 'firebase/app';
@@ -33,7 +32,7 @@ const analytics = getAnalytics(app);
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App buildingsData={BUILDINGS} />
+    <App/>
   </React.StrictMode>
 );
 
