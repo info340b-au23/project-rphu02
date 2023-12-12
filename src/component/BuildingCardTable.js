@@ -29,7 +29,6 @@ export function BuildingCardTable(props) {
     const [partySize, SetpartySize] = useState("");
     const [rating, Setrating] = useState("");
     const [buildingName, SetbuildingName] = useState("");
-    const [address, Setaddress] = useState("");
     const [area, Setarea] = useState("");
     const [bdisabled, Setbdisabled] = useState(true);
     const [adisabled, Setadisabled] = useState(true);
@@ -62,9 +61,6 @@ export function BuildingCardTable(props) {
         }
     }
 
-    function addressCallBack(event) {
-        Setaddress(event.target.value);
-    }
 
     function aCallBack(event) {
         Setarea(event.target.value);
@@ -108,9 +104,6 @@ export function BuildingCardTable(props) {
                     validationErrors.tbuildingName = 'Building Name is required';
                 }
             }
-        }
-        if (!address.trim()) {
-            validationErrors.address = 'address is required';
         }
         if (!area.trim()) {
             validationErrors.area = 'General Area is required';
@@ -275,9 +268,6 @@ export function BuildingCardTable(props) {
                                             <input type="text" id="tga" name="tga" disabled={adisabled} value={tarea} onChange={taCallBack} />
                                             <br></br><br></br>
 
-                                            <label htmlFor="adrs">Address: </label>
-                                            <input type="text" id="adrs" name="adrs" value={address} onChange={addressCallBack} />
-                                            <br></br>
                                         </form></Modal.Body>
                                     <Modal.Footer>
                                         <Button variant="secondary" onClick={handleClose}>

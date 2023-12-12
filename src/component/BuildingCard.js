@@ -30,12 +30,12 @@ export function BuildingCard(props) {
               <div className="col-sm">
                 <h2 className="card-title"><b>{props.building.name}</b> <span style={{ color: "#484848" }}> ({props.building.location})</span></h2>
               </div>
-              <div className='col-sm'>
+              <div className='col-sm cardBottom'>
                 <div className="row">
                   <div className="col-md-6">
                     {liStars}
                   </div>
-                  <div className="col-md-6">
+                  <div className="col-md-6 ">
                     <div className='humans'>
                       {liHumans}
                     </div>
