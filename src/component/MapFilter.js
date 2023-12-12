@@ -1,5 +1,4 @@
 import React from 'react'; //import React Component
-import Select from 'react-select';
 
 function DropdownMenu(props) { //expect a title and items prop
     // title: title
