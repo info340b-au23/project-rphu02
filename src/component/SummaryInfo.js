@@ -15,6 +15,15 @@ export default function RatingInfo(props) {
         liStars[i] = <span key={i} className="fa fa-star checked"></span>
     }
 
+    let average = 0;
+    if (ratings.length > 0){
+        for (const rating of ratings){
+            average += rating.rating;
+        }
+        average = Math.round(average / ratings.length * 10) / 10
+    }
+
+
     return (
         <div className="row">
             <div className="col col-sm-auto col-xl-12">
@@ -25,7 +34,7 @@ export default function RatingInfo(props) {
                 <p className="card-text">{building.description}</p>
                 <div className="row">
                     <div>
-                        <p>Rating: {building.rating} / 5.0 ({ratings.length} Reviews)</p>
+                        <p>Rating: {average} / 5.0 ({ratings.length} Reviews)</p>
                         {liStars}
                     </div>
                 </div>

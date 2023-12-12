@@ -19,6 +19,8 @@ export default function Blog(props) {
         console.error(error);
     });
 
+    console.log(data)
+
     const [includeps, Setincludeps] = useState(false);
     const [partySize, SetpartySize] = useState("");
     const [rating, Setrating] = useState("");

@@ -3,6 +3,7 @@ import React from "react";
 
 export default function RatingGraph(props) {
     const ratings = props.ratings;
+    console.log(ratings);
     const oneStar = [
         <span key={1} className="fa fa-star checked"></span>,
         <span key={2} className="fa fa-star"></span>,
@@ -40,6 +41,7 @@ export default function RatingGraph(props) {
         const rating = ratings[i];
         bucket[rating.rating - 1]++;
     }
+
     return (
         <div className="row">
             <div className="side">
