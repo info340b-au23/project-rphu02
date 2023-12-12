@@ -33,11 +33,11 @@ export default function MapPage() {
                     <div className="row no-gutters">
                         {/* <!--Map--> */}
                         <Map selectedFilters={selectedFilters} />
-                        <div className="colorder-first m-0 p-0">
+                        <div className="col order-first m-0 p-0">
                             <div className="card rounded-0 border-0 m-0 p-0">
                                 <div className="col-sections container-fluid m-0 p-0">
                                     {/*Map Filters*/}
-                                    <MapFilter onFilterChange={handleFilterChange} selectedFilters={selectedFilters} />
+                                    <MapFilter onFilterChange={handleFilterChange} />
                                 </div>
                             </div>
                         </div>
