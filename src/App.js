@@ -1,6 +1,4 @@
 import React, { useState } from 'react'; //import React Component
-import { BuildingCardTable } from './component/BuildingCardTable';
-import { NavBlog } from './component/Navigation';
 import { NavMain } from './component/Navigation';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './component/Home';
@@ -20,8 +18,6 @@ function App(props) {
             <Route path="/map" element={<MapPage />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/BlogForum/:buildingName" element={<BlogForum buildingData={props.buildingsData}/>} />
-            {/* <NavBlog building={uniqueBuildingArray} applyFilterCallback={applyFilter} />
-            <BuildingCardTable buildingList={displayedData} /> */}
           </Routes>
         </main>
         <Footer />
