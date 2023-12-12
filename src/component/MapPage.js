@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Map } from './Map';
 import { MapFilter } from './MapFilter';
 
-export default function MapPage(props) {
+export default function MapPage() {
     // Starting value for filters
     const initialFilters = {
         rating: '',
@@ -16,7 +16,6 @@ export default function MapPage(props) {
 
     // change filters
     const handleFilterChange = (filterKey, value) => {
-        console.log(`Filter changed: ${filterKey} - ${value}`);
         setSelectedFilters((prevFilters) => ({
             ...prevFilters,
             [filterKey]: value,
