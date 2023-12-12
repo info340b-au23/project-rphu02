@@ -47,32 +47,6 @@ export default function BlogForum(props) {
     return cleanup; //effect hook callback returns the cleanup function
   }, [])
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const buildingsSnapshot = await get(child(dbRef, '/buildings/buildings'));
-  //       if (buildingsSnapshot.exists()) {
-  //         const arrayOfObj = Object.entries(buildingsSnapshot.val()).map((e) => e[1]);
-  //         Setdata(arrayOfObj);
-  //       } else {
-  //         console.log("No data available for buildings");
-  //       }
-
-  //       const ratingsSnapshot = await get(child(dbRef, '/ratings/ratings/' + name));
-  //       if (ratingsSnapshot.exists()) {
-  //         const arrayOfObj = Object.entries(ratingsSnapshot.val()).map((e) => e[1]);
-  //         setRatings(arrayOfObj);
-  //       } else {
-  //         console.log("No data available for ratings");
-  //       }
-  //     } catch (error) {
-  //       console.error(error);
-  //     }
-  //   };
-
-  //   fetchData(); // Call the function to fetch data when the component mounts
-  // }, [/* Add dependencies if needed */]);
-
   const filteredBuilding = buildings.filter((building) => name === building.name)
 
 
