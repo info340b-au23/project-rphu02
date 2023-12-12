@@ -93,23 +93,29 @@ export function Map({ selectedFilters }) {
                     showCoverageOnHover={true}
                     disableClusteringAtZoom={15}
                 >
-                    {filteredData.map((building, index) => (
-                        <L.Marker
-                            key={index}
-                            position={[building.lat, building.long]}
-                            icon={mapIcons}
-                            eventHandlers={{
-                                mouseover: (event) => handleMarkerMouseOver(event, event.target)
-                            }}
-                        >
-                            <L.Popup
-                                onMouseOver={handlePopupMouseOver}
-                                onMouseOut={handlePopupMouseLeave}
-                            >
-                                <MapPopup building={building} />
-                            </L.Popup>
-                        </L.Marker>
-                    ))}
+                    {filteredData.map((building, index) => {
+                        if (typeof building.lat === 'number' && typeof building.long === 'number') {
+                            return (
+                                <L.Marker
+                                    key={index}
+                                    position={[building.lat, building.long]}
+                                    icon={mapIcons}
+                                    eventHandlers={{
+                                        mouseover: (event) => handleMarkerMouseOver(event, event.target)
+                                    }}
+                                >
+                                    <L.Popup
+                                        onMouseOver={handlePopupMouseOver}
+                                        onMouseOut={handlePopupMouseLeave}
+                                    >
+                                        <MapPopup building={building} />
+                                    </L.Popup>
+                                </L.Marker>
+                            );
+                        } else {
+                            return null;
+                        }
+                    })}
                 </MarkerClusterGroup>
             </L.MapContainer>
         </div>
