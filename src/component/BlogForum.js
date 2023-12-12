@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import RatingInfo from './SummaryInfo';
-import ratings from '../data/ratings.json'
 import ReviewForm from './Review';
 import RatingTable from './RatingTable';
 import { child, get, getDatabase, onValue, ref } from 'firebase/database';
 
-export default function BlogForum(props) {
+export default function BlogForum() {
   const [buildings, Setdata] = useState([]);
   const [ratings, setRatings] = useState([]);
   const dbRef = ref(getDatabase());

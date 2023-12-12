@@ -17,7 +17,7 @@ function App(props) {
             <Route path="/" exact element={<Home />} />
             <Route path="/map" element={<MapPage />} />
             <Route path="/blog" element={<Blog />} />
-            <Route path="/BlogForum/:buildingName" element={<BlogForum buildingData={props.buildingsData}/>} />
+            <Route path="/BlogForum/:buildingName" element={<BlogForum/>} />
           </Routes>
         </main>
         <Footer />
