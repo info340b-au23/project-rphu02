@@ -7,7 +7,7 @@ import { ref, child, get, getDatabase } from 'firebase/database';
 import MarkerClusterGroup from 'react-leaflet-cluster';
 
 export function Map({ selectedFilters }) {
-    const center = [47.655, -122.307513];
+    const center = [47.655, -122.307513]; // center map at UW
     const [mapHeight, setMapHeight] = useState('100vh');
     const [data, setData] = useState([]);
     const dbRef = ref(getDatabase());
@@ -33,8 +33,8 @@ export function Map({ selectedFilters }) {
     };
 
     useEffect(() => {
-        // Firebase data
-        get(child(dbRef, 'buildings/'))
+        // firebase data
+        get(child(dbRef, '/buildings/buildings'))
             .then((snapshot) => {
                 if (snapshot.exists()) {
                     const arrayOfObj = Object.entries(snapshot.val()).map((e) => e[1]);
@@ -47,7 +47,7 @@ export function Map({ selectedFilters }) {
                 console.error(error);
             });
 
-        // Map window handling
+        // map window handling
         const handleResize = () => {
             setMapHeight(`${window.innerHeight}px`);
         };
@@ -60,7 +60,7 @@ export function Map({ selectedFilters }) {
         };
     }, [dbRef, selectedFilters]);
 
-    // Filter data based on filters, or show everything if nothing selected
+    // filter data based on filters, or show everything if nothing selected
     let filteredData = [];
     if (data) {
         filteredData = data.filter((building) => {
@@ -73,7 +73,7 @@ export function Map({ selectedFilters }) {
         });
     }
 
-    // Icons for map
+    // icons for map
     const mapIcons = new Icon({
         iconUrl: 'https://cdn-icons-png.flaticon.com/512/4467/4467108.png',
         iconSize: [50, 50]
