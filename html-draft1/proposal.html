@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/proposal.css">
+    <meta name="author" content="Raymond, Brian, Tyler, Justin">
+    <meta name="description" content="an interactive websites that helps find study spot on the UW campus">
+    <title>U StudySpots</title>
+</head>
+<body>
+    <header>
+        <h1> U StudySpots</h1>
+    </header>
+    <section id="Problem/Data-Domain">
+        <header>
+            <h2>What is U StudySpots?</h2>    
+        </header>
+        <ul>
+            <li>
+                <p>Our idea for this project is to make a website that will help users find study spots around the 
+                    University Of Washington. This will be helpful because the UW campus is very big and new students, 
+                    especially freshman and incoming students, may not know where to go. The weather in Washington also changes frequently, 
+                    which means a good place to study during the summer may not be a good place to study during the winter. 
+                    Along with this, each student has their own preference surrounding their study environment and nothing
+                    is worse than constantly moving to different building because your current location doesn't fit your study preferences. </p>
+            </li>
+        </ul>
+        <header>
+            <h2>The Issue</h2>
+        </header>
+        <ul>
+            <li>
+                <p>There is not really a website dedicated to helping find study spots. The main problem is that a lot of websites like
+                    reddits and forums are all personal preferences but everyone preferences are different so they might not as helpful. 
+                    Additionally, some of the <a href="https://qr.ae/pKNwVy">answers</a> online also provide old information that may no longer be applicable to students today. 
+                    On top of that, sometimes posts don't include important information like hours of the buildings and some people 
+                    may have busy schedules that need to be considered. Another problem with reddit is that they lack photos and directions
+                    so unless you remember the building location off the top of your head you might not know where it is.</p>
+            </li>
+        </ul>
+        <header>
+            <h2>Existing Solutions</h2>
+        </header>
+            <ul>
+                <li>
+                    <p>One existing solution that exists are online forums, specifically sites like <a href="https://www.reddit.com/r/udub/comments/14dht8/best_places_to_study/">Reddit</a>. These help give good study 
+                         spots around the UW campus because it allows students that have attended or students who are currently 
+                         attending UW to give their opinions so they are reliable and authentic. These sites are good because they have a
+                         reply feature that allows users to post positive and cons about an certain location. The only problem
+                         is that everyones preferences are different so comments might not work for everyone. Finally, it is possible
+                        that data within these forums are not up to date, since people's comments are just a snapshot in the time that they were left. </p>
+                </li>
+            </ul>
+    </section>
+
+    <section id="App-Description"> 
+        <header>
+            <h2>Users of the website</h2>
+        </header>
+        <ul>
+            <li>
+                <p> Students of The University Of Washington will primarily be accessing the website, This <br>
+                    website might have a positive impact on minority groups, especially if students of <br>
+                    minority groups are shy or afraid to reach out to other students, this will be a good <br>
+                    website for them to use if they are trying to find a place to study that fit their preference <br>
+                    without talking to other people.
+                </p>
+            </li>
+        </ul>
+        <header>
+            <h2>Interactive Features of our website</h2>
+        </header>
+        <ul>
+            <li>
+                <p> Our first interactive component is an interactive map of the University <br>
+                    of Washington Campus that allows us to see where each study spot is located upon <br>
+                    clicking on each study spot, it will display short important information on a pop-up <br>
+                    message about this study spot like hours-open, popularity, etc 
+                </p>
+            </li>
+            <li>
+                <p>
+                    Our second interactive component is going to be some type of filtering system, <br>
+                    this will allow users to filter out study spots based on their preferences like noise <br>
+                    level, size of study group, locations (N, E, W, S), and other options, this will either <br>
+                    be done through a check box system or a drop menu with different options for users to select. <br>
+                    Note that this filtering system will either be on a separate page like how dubs <br>
+                    dumps did where upon clicking different options it will narrow down the different <br>
+                    images of the study spots or we will have these filtering systems on the same <br>
+                    page on the page where the filtering will be applied directly to the map.
+                </p>
+            </li>
+            <li>
+                <p>
+                    Our last interactive component is going to be some type of blog system where <br>
+                    users will be able to do multiple things such as rate study spots, upload their <br>
+                    own study spots by uploading an image and name of their spot and any additional information <br>
+                    these inputs will then be displayed as a box image with a rating and when a user hovers over it <br>
+                    it will display additional information such as rating out of 5, and comments from other users <br>
+                    about what they like or dislike about this spot, these comments will be open-end and be anything <br>
+                    this way, students can add their secret/ unground study spots, this also allows our. <br>
+                    website to be more interactive with the users.
+                </p>
+            </li>
+          </ul>
+    </section>
+
+    <section id="Information-API-Description">
+        <header>
+            <h2>Information of the website</h2>
+        </header>
+        <ul>
+            <li>
+                <p>
+                    Our site is providing users with detailed information about all the study spots on campus. <br>
+                    To do so, we will need the following information:
+                    <ul>
+                        <li>Building names</li>
+                        <li>Building locations</li>
+                        <li>Building hours</li>
+                        <li>Accessibility (major restricted, open to the pubic, appointments and etc)</li>
+                        <li>Environment of the building (loud, quiet, crowdedness and etc)</li>
+                    </ul>
+                </p>
+            </li>
+            <li>
+                <p>
+                    In order to show key points and to provide an easily interactable map, we may use the <a href="https://mapsplatform.google.com/">Google Maps API</a>.
+                    This API would help us create a customizable map of UW where we can flag study spots, and provide searchable building names. 
+                </p>
+            </li>
+        </ul>
+    </section>
+
+    <section id="Solution-Description">
+        <header>
+            <h2>Our Solution</h2>
+        </header>
+        <ul>
+            <li>
+                <p>
+                    Our website will help with this problem because it is a combination of every available <br>
+                    source in one convenient location. It includes the blog feature like reddit that allows <br>
+                    users to get opinions from other students and it also allows students to find study spots <br>
+                    that fit directly to their preferences which is one of the main problems that websites <br>
+                    like reddit have. Along with this, including images and visuals will help users determine <br>
+                    if a spot is fit for them which is something that reddit does not really use. Finally, students <br>
+                    would be able to directly navigate to these study spots through the interactive map.
+                </p>
+            </li>
+        </ul>
+    </section>
+</body>
+</html>
