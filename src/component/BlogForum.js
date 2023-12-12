@@ -1,14 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import RatingInfo from './SummaryInfo';
 import ratings from '../data/ratings.json'
 import ReviewForm from './Review';
 import RatingTable from './RatingTable';
+import { child, get, getDatabase, ref } from 'firebase/database';
 
 export default function BlogForum(props) {
-  const buildingData = props.buildingData;
+  const [buildingData, setBuildingData] = useState([]);
+  const [ratingsData, setRatingsData] = useState([]);
+  const db = getDatabase();
+
   const name = useParams();
-  const selectedBuilding = props.buildingData.find(building => building.name === name.buildingName);
+  const buildingName = name.buildingName;
+
+  const dbRef = ref(getDatabase());
+  get(child(dbRef, 'buildings/buildings/')).then((snapshot) => {
+      if (snapshot.exists()) {
+          const arrayOfObj = Object.entries(snapshot.val()).map((e) => ( e[1] ));
+          setBuildingData(arrayOfObj);
+      } else {
+          console.log("No data available");
+      }
+  }).catch((error) => {
+      console.error(error);
+  });
+
+  get(child(dbRef, 'ratings/ratings/' + buildingName)).then((snapshot) => {
+      if (snapshot.exists()) {
+          const arrayOfObj = Object.entries(snapshot.val()).map((e) => ( e[1] ));
+          setRatingsData(arrayOfObj);
+      } else {
+          console.log("No data available");
+      }
+  }).catch((error) => {
+      console.error(error);
+  });
+
+  console.log(buildingData)
+
+  const selectedBuilding = buildingData.find(building => building.name === name.buildingName);
   const selectedRatings = ratings.filter((rating) =>{
     if (rating.name === selectedBuilding.name){
       return rating;
