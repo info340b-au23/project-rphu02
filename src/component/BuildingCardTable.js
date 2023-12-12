@@ -123,7 +123,7 @@ export function BuildingCardTable(props) {
             const db = getDatabase();
 
             // get a reference to the 'users' node in our database
-            const buildingsRef = ref(db, 'buildings');
+            const buildingsRef = ref(db, "buildings/buildings/");
             // add the formdata to a new unique child under 'users' node
             const bn = bdisabled ? buildingName : tbuildingName;
             const a = adisabled ? area : tarea;

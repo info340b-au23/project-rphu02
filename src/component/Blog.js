@@ -8,7 +8,7 @@ import { ref, child, get, getDatabase, push as firebasePush } from 'firebase/dat
 export default function Blog(props) {
   const [data, Setdata] = useState([]);
     const dbRef = ref(getDatabase());
-    get(child(dbRef, 'buildings/')).then((snapshot) => {
+    get(child(dbRef, '/buildings/buildings')).then((snapshot) => {
         if (snapshot.exists()) {
             const arrayOfObj = Object.entries(snapshot.val()).map((e) => ( e[1] ));
             Setdata(arrayOfObj);
