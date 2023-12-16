@@ -5,24 +5,23 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
 import { ref, child, getDatabase } from 'firebase/database';
 // Import the functions you need from the SDKs you need
-import { initializeApp } from 'firebase/app';
-import { getAnalytics } from "firebase/analytics";
+import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDNh9t--U0J_WeBxt6KHdh0XiqSmqggix8",
-  authDomain: "uw-study-spots.firebaseapp.com",
-  databaseURL: "https://uw-study-spots-default-rtdb.firebaseio.com",
-  projectId: "uw-study-spots",
-  storageBucket: "uw-study-spots.appspot.com",
-  messagingSenderId: "487068300917",
-  appId: "1:487068300917:web:eced77a54ce24d2dda2a3c"
+  apiKey: "AIzaSyBN0eU3KmkBs5UqqiiH633WoTOG8221VXE",
+  authDomain: "uw-study-spots-6236c.firebaseapp.com",
+  databaseURL: "https://uw-study-spots-6236c-default-rtdb.firebaseio.com",
+  projectId: "uw-study-spots-6236c",
+  storageBucket: "uw-study-spots-6236c.appspot.com",
+  messagingSenderId: "701428517134",
+  appId: "1:701428517134:web:3fe89e90c8b611028faf5f"
 };
+
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+initializeApp(firebaseConfig);
 
 
 // const db = getDatabase();
